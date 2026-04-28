@@ -28,16 +28,13 @@ It also fits how people actually read government content – on a phone, on a bu
 
 ## Know who you are writing for
 
-Before you write a single word, picture one real person who will read it. Where are they? What are they trying to do? What worry brought them to your page?
+Before you write a single word, picture one real person who will read it. Not the audience in general – one person.
 
-The audience for most government content in Barbados is broad. It includes:
+Where are they? What are they trying to do? What worry brought them to your page? Are they on a phone in a waiting room, or at a desk with time to read? Are they doing this for themselves, or for someone else?
 
-- people whose first language is not English
-- older Barbadians who may be using a phone or tablet for the first time
-- young people doing a transaction on behalf of an older relative
-- specialists who already know the topic and just want a quick answer
+Holding one specific reader in your head as you write keeps your writing grounded. It is much easier to choose the right word for *Mrs Lewis, who is renewing her late husband's vehicle registration* than for *the public*.
 
-You cannot write a different version for each. So write for everyone – using common words, short sentences, and the same vocabulary your readers would use themselves.
+You will not get it right for everyone. But if you write for the reader with the least time and the least confidence, you will be writing well for everyone else too.
 
 ## Use common words
 
