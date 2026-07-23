@@ -23,7 +23,7 @@ layout: layouts/base.njk
 
       {%- set tocMarkup = content | toc -%}
       {%- if tocMarkup and "<li" in tocMarkup -%}
-      <nav class="contents-list" aria-label="Contents">
+      <nav id="contents" class="contents-list" aria-label="Contents">
         <p class="contents-list__heading">Contents</p>
         {{ tocMarkup | safe }}
       </nav>
