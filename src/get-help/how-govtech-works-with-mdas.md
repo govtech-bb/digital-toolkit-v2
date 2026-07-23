@@ -2,8 +2,6 @@
 layout: layouts/article.njk
 title: How GovTech works with MDAs
 lede: An overview of the different ways GovTech can engage – from light-touch advice and standards assurance, through to hands-on delivery support and co-design.
-lastUpdated: July 2026
-permalink: /get-help/how-govtech-works-with-mdas.html
 ---
 GovTech Barbados supports ministries, departments and agencies (MDAs) at every stage of digital service delivery. This page explains the different ways we can work together – from light-touch advice through to hands-on delivery – and how to choose the right one for your project.
 
