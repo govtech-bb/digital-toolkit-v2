@@ -2,6 +2,10 @@
 layout: layouts/base.njk
 isHome: true
 pageTitle: "Digital Toolkit – GovTech Barbados"
+tagLabels:
+  new: New
+  soon: Coming soon
+  later: Coming later
 ---
 <section class="hero">
   <div class="container">
@@ -27,7 +31,7 @@ pageTitle: "Digital Toolkit – GovTech Barbados"
           {% set itemDesc  = entry.data.lede  if entry else item.desc %}
         <li class="resource-item">
           <a class="resource-item__link" href="{{ itemHref }}">{{ itemTitle }}</a>
-          {% if item.tag %}<span class="tag tag--{{ item.tag.variant }}">{{ item.tag.label }}</span>{% endif %}
+          {% if item.tag %}<span class="tag tag--{{ item.tag }}">{{ tagLabels[item.tag] }}</span>{% endif %}
           <p class="resource-item__desc">{{ itemDesc | safe }}</p>
         </li>
         {% endfor %}
