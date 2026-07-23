@@ -2,8 +2,6 @@
 layout: layouts/article.njk
 title: Introduction to digital transformation in Barbados
 lede: A plain-language guide for senior leaders and project managers on what digital transformation means, how government services get built, and what your role is.
-lastUpdated: July 2026
-permalink: /getting-started/introduction-to-digital-transformation.html
 ---
 Digital transformation is the work of redesigning government services around the people who use them – and using technology to make those services simpler, faster and more reliable.
 
@@ -131,6 +129,6 @@ If your service is a straightforward form, you may not need a project at all –
 
 ## Where to get help
 
-- Read [how GovTech works with MDAs](/get-help/how-govtech-works-with-mdas.html) to understand the ways GovTech can support you.
+- Read [how GovTech works with MDAs](/get-help/how-govtech-works-with-mdas/) to understand the ways GovTech can support you.
 - The [Barbados Digital Service Standards](https://github.com/govtech-bb/Barbados-Digital-Service-Standards) set out what your service must meet.
 - Contact GovTech at [info@govtech.bb](mailto:info@govtech.bb) if you are thinking about digitising a service, planning a procurement, or unsure where to start. You do not need to have all the answers before contacting us – early conversations lead to better outcomes.
