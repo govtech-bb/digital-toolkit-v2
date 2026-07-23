@@ -2,7 +2,6 @@
 layout: layouts/article.njk
 title: Guidance on agile procurement
 lede: How to write requirements, structure contracts and manage suppliers in a way that supports iterative delivery – rather than locking into a single large contract with fixed specifications up front.
-permalink: /working-with-suppliers/guidance-on-agile-procurement.html
 ---
 ## Why procurement matters for digital services
 
