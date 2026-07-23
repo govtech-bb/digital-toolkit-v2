@@ -2,7 +2,6 @@
 layout: layouts/article.njk
 title: "Technology decisions: how to choose the right approach"
 lede: A framework for making technology choices – focusing on capability, user needs and long-term sustainability rather than just build vs. buy.
-permalink: /working-with-suppliers/technology-decisions.html
 ---
 ## The question behind the question
 

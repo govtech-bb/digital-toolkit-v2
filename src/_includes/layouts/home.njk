@@ -2,6 +2,10 @@
 layout: layouts/base.njk
 isHome: true
 pageTitle: "Digital Toolkit – GovTech Barbados"
+tagLabels:
+  new: New
+  soon: Coming soon
+  later: Coming later
 ---
 <section class="hero">
   <div class="container">
@@ -21,10 +25,14 @@ pageTitle: "Digital Toolkit – GovTech Barbados"
       <p class="toolkit-section__desc">{{ section.desc }}</p>
       <ul class="resource-list">
         {% for item in section.items %}
+          {% set entry = collections.all | pageByPath(item.page) %}
+          {% set itemTitle = entry.data.title if entry else item.title %}
+          {% set itemHref  = entry.url        if entry else item.href %}
+          {% set itemDesc  = entry.data.lede  if entry else item.desc %}
         <li class="resource-item">
-          <a class="resource-item__link" href="{{ item.href }}">{{ item.title }}</a>
-          {% if item.tag %}<span class="tag tag--{{ item.tag.variant }}">{{ item.tag.label }}</span>{% endif %}
-          <p class="resource-item__desc">{{ item.desc | safe }}</p>
+          <a class="resource-item__link" href="{{ itemHref }}">{{ itemTitle }}</a>
+          {% if item.tag %}<span class="tag tag--{{ item.tag }}">{{ tagLabels[item.tag] }}</span>{% endif %}
+          <p class="resource-item__desc">{{ itemDesc | safe }}</p>
         </li>
         {% endfor %}
       </ul>

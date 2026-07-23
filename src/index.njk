@@ -1,8 +1,6 @@
 ---
 layout: layouts/home.njk
-permalink: /index.html
 heroTitle: Digital Toolkit for Government
-lastUpdated: February 2026
 lede: >
   Everything you need to design, build and procure digital services
   that meet the Barbados Digital Service Standards — whether you are
@@ -11,16 +9,14 @@ sections:
   - heading: Getting started
     desc: Understand how digital transformation works in Government and what GovTech expects
     items:
-      - title: Barbados Digital Service Standards
-        href: https://github.com/govtech-bb/Barbados-Digital-Service-Standards
-        desc: The standard your service must meet. Start here if your ministry, department or agency (MDA) is planning a new digital service or improving an existing one.
-      - title: Introduction to digital transformation in Barbados
-        href: /getting-started/introduction-to-digital-transformation.html
-        tag: { variant: new, label: New }
-        desc: A plain-language guide for senior leaders and project managers on what digital transformation means, how government services get built, and what your role is.
+      - page: getting-started/barbados-digital-service-standards.md
+      - page: getting-started/introduction-to-digital-transformation.md
+        tag: new
+      - page: getting-started/service-type-definitions.md
+        tag: new
       - title: Assess your service's readiness
         href: "#"
-        tag: { variant: soon, label: Coming soon }
+        tag: soon
         desc: A short checklist to help you understand where your service is today and what steps to take next — before engaging a vendor or requesting support from GovTech.
 
   - heading: Design and build
@@ -29,13 +25,7 @@ sections:
       - title: Barbados Government Design System
         href: https://govtech-bb.github.io/design-system/?path=/docs/components-backbutton--docs
         desc: Reusable components, styles and patterns for building consistent, accessible government services. Any supplier building a government service should use this design system.
-      - title: Writing content for Barbadians
-        href: /design-and-build/writing-content-for-barbadians.html
-        desc: >-
-          How to write government content that anyone can understand &ndash;
-          designed around the person with the least reading confidence, not
-          the most. Covers plain language, sentence length, structure, and
-          what to avoid.
+      - page: design-and-build/writing-content-for-barbadians.md
       - title: GovTech GitHub
         href: https://github.com/govtech-bb
         desc: Open-source code from GovTech Barbados. Suppliers and MDAs are encouraged to reuse and contribute to shared components, form libraries and service templates.
@@ -54,25 +44,19 @@ sections:
           to date. If your MDA needs to digitise a paper form, get in touch — the team can work with you to design, build and publish it.
       - title: GovTech Form Builder
         href: "#"
-        tag: { variant: later, label: Coming later }
+        tag: later
         desc: A tool for MDAs to quickly create accessible online forms — no coding or procurement required. Ideal for applications, registrations, and simple data collection that follow a straightforward path.
       - title: When to use the form builder vs. a custom service
         href: "#"
-        tag: { variant: later, label: Coming later }
+        tag: later
         desc: Guidance on determining whether your service is a good fit for the form builder or whether it needs something more bespoke — and what to do in either case.
 
   - heading: Working with suppliers
     desc: How to procure digital services in a way that leads to better outcomes
     items:
-      - title: Guidance on agile procurement
-        href: /working-with-suppliers/guidance-on-agile-procurement.html
-        desc: How to write requirements, structure contracts and manage suppliers in a way that supports iterative delivery — rather than locking into a single large contract with fixed specifications up front.
-      - title: What to include in a request for proposals (RFP)
-        href: /working-with-suppliers/what-to-include-in-an-rfp.html
-        desc: Template language and guidance for RFPs that require suppliers to meet the Digital Service Standards, use the Design System, and work in the open.
-      - title: "Technology decisions: how to choose the right approach"
-        href: /working-with-suppliers/technology-decisions.html
-        desc: A framework for making technology choices — focusing on capability, user needs and long-term sustainability rather than just build vs. buy — plus a recommended default stack for small, simple services.
+      - page: working-with-suppliers/guidance-on-agile-procurement.md
+      - page: working-with-suppliers/what-to-include-in-an-rfp.md
+      - page: working-with-suppliers/technology-decisions.md
 
   - heading: Get help from GovTech
     desc: We're here to support MDAs at every stage of digital service delivery
@@ -80,13 +64,11 @@ sections:
       - title: Contact GovTech
         href: mailto:info@govtech.bb
         desc: Get in touch if your MDA is planning a digital initiative, needs technical guidance, or wants to discuss how GovTech can support your project.
-      - title: How GovTech works with MDAs
-        href: /get-help/how-govtech-works-with-mdas.html
-        tag: { variant: new, label: New }
-        desc: An overview of the different ways GovTech can engage — from light-touch advice and standards assurance, through to hands-on delivery support and co-design.
+      - page: get-help/how-govtech-works-with-mdas.md
+        tag: new
       - title: Service assessments
         href: "#"
-        tag: { variant: soon, label: Coming soon }
+        tag: soon
         desc: What to expect when your service is assessed against the Barbados Digital Service Standards, and how to prepare.
 
 cta:

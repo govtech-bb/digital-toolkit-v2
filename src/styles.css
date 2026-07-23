@@ -84,17 +84,21 @@ a:focus {
   display: flex;
   align-items: center;
 }
-.site-header__logo {
+.site-header__logo,
+.site-header__logo:link,
+.site-header__logo:visited {
   color: var(--bb-black);
 }
-.site-header__logo a {
+.site-header__logo a,
+.site-header__logo a:visited {
   color: inherit;
   text-decoration: none;
 }
-.site-header__logo a:visited {
-  color: inherit;
+a.site-header__logo {
+  text-decoration: none;
 }
-.site-header__logo a:focus {
+.site-header__logo a:focus,
+a.site-header__logo:focus {
   background: var(--bb-focus);
   color: var(--bb-black);
 }
