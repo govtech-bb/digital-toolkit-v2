@@ -18,7 +18,7 @@ Content is published as flat files rendered on gov.bb and does not need a conten
 
 **Defining characteristic:** static information, no logic.
 
-**Example:** Get a document notarised.
+**Example:** [Get a document notarised](https://alpha.gov.bb/travel-id-citizenship/get-a-document-notarised).
 
 ## Smart content
 
@@ -28,7 +28,7 @@ It is essentially a front-end-only website: there is no back end.
 
 **Defining characteristic:** contains logic, but no two-way communication with an external service or database access. It may read data from an API or a flat file containing key information. A service that only reads from an API without caching still sits here; if a caching layer is added to protect the upstream service from load, it should usually be reclassified as a complex service.
 
-**Example:** Bank holidays.
+**Example:** [Bank holidays](https://alpha.gov.bb/bank-holiday-calendar?year=2026).
 
 ## Simple service
 
@@ -40,7 +40,7 @@ Case management is the default for new forms. Email is still useful, particularl
 
 **Defining characteristic:** captures user input and routes it to an MDA; may involve payments and uploads.
 
-**Example:** Get a copy of a birth certificate.
+**Example:** [Get a copy of a birth certificate](https://alpha.gov.bb/family-birth-relationships/get-birth-certificate).
 
 ## Complex service
 
