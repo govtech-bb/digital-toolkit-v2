@@ -107,6 +107,40 @@ Conduct user research throughout the pilot – observe how citizens use the serv
 
 Define success criteria before the pilot starts. Schedule the decision meeting from day one. If the pilot fails, that is a valuable outcome – you have spent a small amount to avoid a large mistake.
 
+## A default stack for simple services
+
+The principles above tell you what to optimise for: open source, open standards, and long-term government control. They do not tell a small team what to actually choose on a Monday morning. For a simple service – a form, a lookup, a booking, a short transaction that a small team can self-build – you should not have to relitigate every technology decision from first principles.
+
+This section is the paved road: a set of sensible defaults that already meet the principles above, so the team can spend its thinking on the service rather than the setup. These are defaults, not rules. They sit under the open-standards principles, they do not replace them. Depart from them when you have a good reason – but write the reason down.
+
+### Build the front end with React and Tailwind
+
+For a simple public-facing service, build the front end with React (version 18 or 19) and Tailwind CSS 4. This is what the Barbados Government Design System assumes, so you get its components, patterns, and accessibility work without rebuilding them. Building on the Design System is the fastest way to meet the Digital Service Standards for a public-facing service, and it keeps your service looking and behaving like the rest of government.
+
+Use this unless you have a specific reason not to. If you do depart from it, you take on the cost of meeting the Standards yourself – accessibility, responsive layouts, error handling, and the rest.
+
+### Hosting, deploy and analytics
+
+**Deploy to a subdomain of `alpha.gov.bb`.** While a service is in alpha, host it at an address like `your-service.alpha.gov.bb`. This keeps alpha services together, and it tells users honestly what phase the service is in.
+
+**Keep hosting boring.** The code should live in a government-owned repository from day one, deployed by an automated pipeline so that any team member can ship a change – and roll it back – without a specialist. Avoid clever infrastructure that only one person understands. Boring, well-understood hosting is easier to hand over and cheaper to run.
+
+**Choose analytics that respect privacy.** Use an open, privacy-respecting analytics tool that measures whether people can complete the service – not one that tracks individuals across the web. Measure the task, not the person: how many people start, how many finish, and where they get stuck. Do not collect personal data you do not need.
+
+<!-- TODO: confirm GovTech's standard hosting/analytics -->
+
+The specific hosting and analytics tools GovTech uses as standard should be confirmed with the GovTech engineering team. The recommendations above are sensible defaults, not settled policy.
+
+### When to reach for the heavier DPI components instead
+
+The default stack is for simple services. Some needs are bigger than a front end and a form, and for those you should adopt a shared Digital Public Infrastructure (DPI) component rather than build your own. Reach for these when your service touches a foundational government capability:
+
+- **OpenCRVS** – for civil registration, such as recording births, deaths, and marriages. Reach for it when your service is the registry itself, not just a form that feeds one.
+- **MOSIP** – for foundational digital identity. Reach for it when your service needs to establish or verify who someone is at a national level, rather than manage its own small login.
+- **X-Road** – for secure data exchange between government systems. Reach for it when your service must share data across agencies, rather than holding a copy of everything itself.
+
+These components are described more fully in "The role of Digital Public Infrastructure" below. The rule of thumb is simple: build the simple service on the default stack, but do not rebuild the foundations – adopt the shared component. If you find yourself writing your own identity system, your own registry, or your own cross-agency data exchange, stop and check whether a DPI component already exists.
+
 ## Avoiding vendor dependency
 
 Vendor dependency is the single greatest risk in government technology decisions. It is not primarily a legal or contractual problem – it is a capability problem. When government lacks the skills to understand, modify, or operate its own systems, it becomes dependent on whoever built them, regardless of what the contract says.
