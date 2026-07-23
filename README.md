@@ -86,7 +86,7 @@ npm run build    # one-off build into _site/
 
 ## Deployment
 
-The toolkit is deployed at [https://barbados-digital-toolkit.alpha.gov.bb/](https://barbados-digital-toolkit.alpha.gov.bb/).
-
-Any deploy pipeline should run `npm ci && npm run build` and publish the
-contents of `_site/`.
+The toolkit is deployed on Netlify at
+[https://prismatic-kleicha-bc1199.netlify.app/](https://prismatic-kleicha-bc1199.netlify.app/).
+Build command and publish directory are pinned in `netlify.toml`; Netlify
+picks them up on push to `main`.
