@@ -1,9 +1,10 @@
-# How GovTech works with MDAs
-
-Last updated July 2026
-
 ---
-
+layout: layouts/article.njk
+title: How GovTech works with MDAs
+lede: An overview of the different ways GovTech can engage – from light-touch advice and standards assurance, through to hands-on delivery support and co-design.
+lastUpdated: July 2026
+permalink: /get-help/how-govtech-works-with-mdas.html
+---
 GovTech Barbados supports ministries, departments and agencies (MDAs) at every stage of digital service delivery. This page explains the different ways we can work together – from light-touch advice through to hands-on delivery – and how to choose the right one for your project.
 
 This page is for anyone in an MDA who is planning a digital initiative, working with a supplier, or wondering whether GovTech can help.
@@ -126,4 +127,3 @@ Support works best as a partnership. In return for GovTech's involvement, we ask
 
 Email [info@govtech.bb](mailto:info@govtech.bb) with a short description of your service or problem. You do not need to have all the answers before contacting us – early engagement leads to better outcomes and fewer delays.
 
----

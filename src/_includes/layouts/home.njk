@@ -1,0 +1,43 @@
+---
+layout: layouts/base.njk
+isHome: true
+pageTitle: "Digital Toolkit – GovTech Barbados"
+---
+<section class="hero">
+  <div class="container">
+    <h1>{{ heroTitle }}</h1>
+    {% if lastUpdated %}<p class="hero__subtitle">Last updated {{ lastUpdated }}</p>{% endif %}
+    <hr class="hero__rule">
+    <p class="hero__lede">{{ lede | safe }}</p>
+  </div>
+</section>
+
+<main class="main-content">
+  <div class="container">
+
+    {% for section in sections %}
+    <section class="toolkit-section">
+      <h2 class="toolkit-section__heading">{{ section.heading }}</h2>
+      <p class="toolkit-section__desc">{{ section.desc }}</p>
+      <ul class="resource-list">
+        {% for item in section.items %}
+        <li class="resource-item">
+          <a class="resource-item__link" href="{{ item.href }}">{{ item.title }}</a>
+          {% if item.tag %}<span class="tag tag--{{ item.tag.variant }}">{{ item.tag.label }}</span>{% endif %}
+          <p class="resource-item__desc">{{ item.desc | safe }}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endfor %}
+
+    {% if cta %}
+    <div class="cta-panel">
+      <h2>{{ cta.heading }}</h2>
+      <p>{{ cta.body | safe }}</p>
+      <a class="button" href="{{ cta.href }}">{{ cta.label }}</a>
+    </div>
+    {% endif %}
+
+  </div>
+</main>

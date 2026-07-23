@@ -1,7 +1,9 @@
-# Technology decisions: how to choose the right approach
-
-A framework for making technology choices – focusing on capability, user needs and long-term sustainability rather than just build vs. buy.
-
+---
+layout: layouts/article.njk
+title: "Technology decisions: how to choose the right approach"
+lede: A framework for making technology choices – focusing on capability, user needs and long-term sustainability rather than just build vs. buy.
+permalink: /working-with-suppliers/technology-decisions.html
+---
 ## The question behind the question
 
 When government faces a technology decision, the instinct is to ask: should we build this ourselves or buy an existing solution? But this framing presents a false choice. In reality, modern government technology exists on a spectrum, with multiple paths available: buying and configuring commercial products, building on Digital Public Infrastructure (DPI) and Digital Public Goods (DPGs), commissioning vendors to build, self-building with in-house teams, or hybrid approaches that combine purchased software with custom interfaces and integrations.

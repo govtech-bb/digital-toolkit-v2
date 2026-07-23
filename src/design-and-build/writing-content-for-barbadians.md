@@ -1,9 +1,10 @@
-# Writing content for Barbadians
-
-Last updated April 2026
-
 ---
-
+layout: layouts/article.njk
+title: Writing content for Barbadians
+lede: How to write government content that anyone can understand – designed around the person with the least reading confidence, not the most.
+lastUpdated: April 2026
+permalink: /design-and-build/writing-content-for-barbadians.html
+---
 Government content should be understandable to anyone who needs it. That means designing your writing for the person with the least reading confidence, not the most.
 
 This page is for anyone in an MDA who writes content the public will read – form questions, letters, emails, webpages, error messages, guidance notes, public notices.
@@ -217,5 +218,3 @@ GovTech is building a tool to help MDAs check the readability of their content b
 - The [Barbados Digital Service Standards](https://github.com/govtech-bb/Barbados-Digital-Service-Standards) require services to be designed around user needs. Content is part of that.
 - The [Barbados Government Design System](https://govtech-bb.github.io/design-system/) includes patterns for forms, error messages and other public-facing text.
 - Contact GovTech at [info@govtech.bb](mailto:info@govtech.bb) if you would like a content review or help writing for a specific service.
-
----

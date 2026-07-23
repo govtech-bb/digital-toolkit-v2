@@ -1,9 +1,10 @@
-# Introduction to digital transformation in Barbados
-
-Last updated July 2026
-
 ---
-
+layout: layouts/article.njk
+title: Introduction to digital transformation in Barbados
+lede: A plain-language guide for senior leaders and project managers on what digital transformation means, how government services get built, and what your role is.
+lastUpdated: July 2026
+permalink: /getting-started/introduction-to-digital-transformation.html
+---
 Digital transformation is the work of redesigning government services around the people who use them – and using technology to make those services simpler, faster and more reliable.
 
 This page is for senior leaders and project managers in ministries, departments and agencies (MDAs). It explains what digital transformation means in practice, how government digital services get built, and what your role is as a leader.
@@ -126,12 +127,10 @@ If your MDA is at the beginning of this journey, here is a practical sequence:
 5. **Define success.** Set clear, measurable outcomes – reduced processing time, fewer office visits, higher satisfaction.
 6. **Plan your team and budget.** Decide who will lead the work, whether you need a supplier, and secure an appropriate budget.
 
-If your service is a straightforward form, you may not need a project at all – the GovTech Forms team may be able to help you put it online quickly. See [put simple forms online](../index.html) in this toolkit.
+If your service is a straightforward form, you may not need a project at all – the GovTech Forms team may be able to help you put it online quickly. See [put simple forms online](/) in this toolkit.
 
 ## Where to get help
 
-- Read [how GovTech works with MDAs](../get-help/how-govtech-works-with-mdas.html) to understand the ways GovTech can support you.
+- Read [how GovTech works with MDAs](/get-help/how-govtech-works-with-mdas.html) to understand the ways GovTech can support you.
 - The [Barbados Digital Service Standards](https://github.com/govtech-bb/Barbados-Digital-Service-Standards) set out what your service must meet.
 - Contact GovTech at [info@govtech.bb](mailto:info@govtech.bb) if you are thinking about digitising a service, planning a procurement, or unsure where to start. You do not need to have all the answers before contacting us – early conversations lead to better outcomes.
-
----

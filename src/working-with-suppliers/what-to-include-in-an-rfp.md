@@ -1,7 +1,9 @@
-# What to include in a request for proposals (RFP)
-
-Template language and guidance for RFPs that require suppliers to meet the Digital Service Standards, use the Design System, and work in the open.
-
+---
+layout: layouts/article.njk
+title: What to include in a request for proposals (RFP)
+lede: Template language and guidance for RFPs that require suppliers to meet the Digital Service Standards, use the Design System, and work in the open.
+permalink: /working-with-suppliers/what-to-include-in-an-rfp.html
+---
 ## How this guidance works
 
 This page provides template language you can adapt for your own RFPs when procuring digital services. Each section includes the rationale for why it matters and suggested wording you can use or modify.

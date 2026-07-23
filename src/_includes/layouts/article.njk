@@ -1,0 +1,36 @@
+---
+layout: layouts/base.njk
+---
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <a href="/">Digital Toolkit</a>
+    <span class="breadcrumb__separator">&#8250;</span>
+    <span class="breadcrumb__current">{{ title }}</span>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="container">
+    <h1>{{ title }}</h1>
+    {% if lede %}<p class="article-header__lede">{{ lede | safe }}</p>{% endif %}
+    <hr class="article-header__rule">
+  </div>
+</header>
+
+<main class="main-content">
+  <div class="container">
+    <article class="article-body">
+
+      {%- set tocMarkup = content | toc -%}
+      {%- if tocMarkup and "<li" in tocMarkup -%}
+      <nav class="contents-list" aria-label="Contents">
+        <p class="contents-list__heading">Contents</p>
+        {{ tocMarkup | safe }}
+      </nav>
+      {%- endif %}
+
+      {{ content | safe }}
+
+    </article>
+  </div>
+</main>

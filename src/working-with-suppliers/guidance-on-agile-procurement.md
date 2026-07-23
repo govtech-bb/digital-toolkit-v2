@@ -1,7 +1,9 @@
-# Guidance on agile procurement
-
-How to write requirements, structure contracts and manage suppliers in a way that supports iterative delivery – rather than locking into a single large contract with fixed specifications up front.
-
+---
+layout: layouts/article.njk
+title: Guidance on agile procurement
+lede: How to write requirements, structure contracts and manage suppliers in a way that supports iterative delivery – rather than locking into a single large contract with fixed specifications up front.
+permalink: /working-with-suppliers/guidance-on-agile-procurement.html
+---
 ## Why procurement matters for digital services
 
 Traditional government procurement assumes that all requirements can be fully specified upfront, that delivery can be planned in a linear sequence, and that success is defined by contractual compliance. These assumptions consistently fail in digital service delivery because user needs evolve as learning happens, technology choices must adapt, and value emerges through iteration – not prediction.

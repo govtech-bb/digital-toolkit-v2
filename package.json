@@ -1,0 +1,17 @@
+{
+  "name": "barbados-digital-toolkit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Barbados Digital Toolkit for Government",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "eleventy-plugin-toc": "^1.1.5",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.2.0"
+  }
+}
