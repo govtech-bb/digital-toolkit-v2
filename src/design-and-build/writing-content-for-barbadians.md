@@ -2,8 +2,6 @@
 layout: layouts/article.njk
 title: Writing content for Barbadians
 lede: How to write government content that anyone can understand – designed around the person with the least reading confidence, not the most.
-lastUpdated: April 2026
-permalink: /design-and-build/writing-content-for-barbadians.html
 ---
 Government content should be understandable to anyone who needs it. That means designing your writing for the person with the least reading confidence, not the most.
 
