@@ -1,0 +1,9 @@
+# Build settings for Netlify.
+#
+# Kept in the repo (not only in the Netlify UI) so that every deploy context —
+# production, branch deploys and pull-request deploy previews — runs the same
+# Eleventy build and publishes the generated site. Without this, deploy
+# previews had no build command and published nothing (404 on every page).
+[build]
+  command = "npm run build"
+  publish = "_site"
