@@ -213,6 +213,6 @@ GovTech is building a tool to help MDAs check the readability of their content b
 
 ## Where to get help
 
-- The [Barbados Digital Service Standards](https://github.com/govtech-bb/Barbados-Digital-Service-Standards) require services to be designed around user needs. Content is part of that.
+- The [Barbados Digital Service Standards](/getting-started/barbados-digital-service-standards/) require services to be designed around user needs. Content is part of that.
 - The [Barbados Government Design System](https://govtech-bb.github.io/design-system/) includes patterns for forms, error messages and other public-facing text.
 - Contact GovTech at [info@govtech.bb](mailto:info@govtech.bb) if you would like a content review or help writing for a specific service.

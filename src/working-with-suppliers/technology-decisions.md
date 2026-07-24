@@ -59,7 +59,7 @@ Best for commodity functions where the market is mature and competitive: appoint
 
 **Build on DPI / adopt Digital Public Goods**
 
-DPI components – such as OpenCRVS for civil registration, MOSIP for identity, or X-Road for interoperability – offer a middle path: technical sovereignty without full build costs. You get the benefit of a community-maintained codebase while retaining control over your data and the ability to customise for local needs.
+DPI components – shared open-source building blocks for capabilities like identity, payments, data exchange and civil registration, maintained by international communities – offer a middle path: technical sovereignty without full build costs. You get the benefit of a community-maintained codebase while retaining control over your data and the ability to customise for local needs.
 
 This approach works well for growing-capability governments like Barbados, provided you work with an experienced implementation partner who prioritises knowledge transfer. The risk is a different form of lock-in if the partner, rather than the government team, holds all the implementation knowledge. The same knowledge transfer disciplines described in the agile procurement guidance apply here.
 
@@ -106,6 +106,34 @@ Conduct user research throughout the pilot – observe how citizens use the serv
 
 Define success criteria before the pilot starts. Schedule the decision meeting from day one. If the pilot fails, that is a valuable outcome – you have spent a small amount to avoid a large mistake.
 
+## A default stack for simple services
+
+The principles above tell you what to optimise for: open source, open standards, and long-term government control. They do not tell a small team what to actually choose on a Monday morning. For a simple service – a form, a lookup, a booking, a short transaction that a small team can self-build – you should not have to relitigate every technology decision from first principles.
+
+This section is the paved road: a set of sensible defaults that already meet the principles above, so the team can spend its thinking on the service rather than the setup. These are defaults, not rules. They sit under the open-standards principles, they do not replace them. Depart from them when you have a good reason – but write the reason down.
+
+### Build the front end with React and Tailwind
+
+For a simple public-facing service, build the front end with React (version 18 or 19) and Tailwind CSS 4. This is what the Barbados Government Design System assumes, so you get its components, patterns, and accessibility work without rebuilding them. Building on the Design System is the fastest way to meet the Digital Service Standards for a public-facing service, and it keeps your service looking and behaving like the rest of government.
+
+Use this unless you have a specific reason not to. If you do depart from it, you take on the cost of meeting the Standards yourself – accessibility, responsive layouts, error handling, and the rest.
+
+### Hosting, deploy and analytics
+
+**Deploy to a subdomain of `alpha.gov.bb`.** Government digital services in Barbados are published on `alpha.gov.bb`, at a subdomain like `your-service.alpha.gov.bb`. See [about alpha.gov.bb](/getting-started/about-alpha-gov-bb/) for what this is and why.
+
+**Keep hosting boring.** The code should live in a government-owned repository from day one, deployed by an automated pipeline so that any team member can ship a change – and roll it back – without a specialist. Avoid clever infrastructure that only one person understands. Boring, well-understood hosting is easier to hand over and cheaper to run.
+
+**Choose analytics that respect privacy.** Use an open, privacy-respecting analytics tool that measures whether people can complete the service – not one that tracks individuals across the web. Measure the task, not the person: how many people start, how many finish, and where they get stuck. Do not collect personal data you do not need.
+
+<!-- TODO: confirm GovTech's standard hosting/analytics -->
+
+The specific hosting and analytics tools GovTech uses as standard should be confirmed with the GovTech engineering team. The recommendations above are sensible defaults, not settled policy.
+
+### When the default stack is not enough
+
+The default stack is for simple services. Some needs are bigger than a front end and a form – a full registry, a national identity system, a cross-agency data exchange – and those are decisions to make with GovTech rather than solve inside a single service team. The rule of thumb: build the simple service on the default stack, but do not rebuild the foundations. If you find yourself writing your own identity system, your own registry, or your own cross-agency data exchange, stop and talk to GovTech first.
+
 ## Avoiding vendor dependency
 
 Vendor dependency is the single greatest risk in government technology decisions. It is not primarily a legal or contractual problem – it is a capability problem. When government lacks the skills to understand, modify, or operate its own systems, it becomes dependent on whoever built them, regardless of what the contract says.
@@ -134,7 +162,7 @@ The benefits are significant: lower cost than custom builds, faster implementati
 
 The key requirement is that government builds the internal capability to deploy, configure, and maintain these components – or works with implementation partners under contracts that enforce genuine knowledge transfer. Adopting DPI without building capability simply shifts the dependency from a commercial vendor to an implementation partner.
 
-Barbados is already exploring this path through initiatives like the OpenCRVS civil registration system. The principle should extend to other foundational services as GovTech's capability grows.
+Barbados does not yet run a DPI stack, but the principle is worth keeping in view for foundational services as GovTech's capability grows.
 
 ## Making the decision
 
