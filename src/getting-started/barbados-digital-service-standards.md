@@ -7,6 +7,49 @@ These are the standards by which public-facing digital services in Barbados will
 
 The checklists in the "How to do it" sections contain ideas about how you might practically check if you are building services in line with the standards.
 
+## What to show at each phase gate
+
+Services are assessed against these standards at the end of each phase – discovery, alpha, beta – and again from time to time once live. An assessor gives one of three outcomes: *met*, *met with conditions*, or *not yet met*. Most services need more than one look before a gate is fully met. That is normal.
+
+Not every standard applies fully in early phases. Aim to show honest progress against each one for the phase you are in. GovTech runs the assessment; the MDA that owns the service accepts the outcome and decides to commit budget to the next phase.
+
+### Discovery to alpha
+
+Before you start building prototypes, you should be able to show:
+
+- who your users are and what they need
+- a clear problem statement, based on research, not assumption
+- that the problem is worth solving and fits your MDA's remit
+- a plan for the alpha and the team to run it
+
+### Alpha to beta
+
+Before you build the real service, you should be able to show:
+
+- prototypes tested with real users, and what you learned
+- the approach you have chosen, and why you ruled others out
+- the main technology and design decisions, and the risks
+- that the service can realistically be built, run and afforded
+
+### Beta to live
+
+Before you open the service to everyone, you should be able to show:
+
+- a working service that real users have completed end to end
+- that it is accessible, secure and protects personal data
+- performance data, and how you will keep measuring it
+- a team and budget in place to run and improve the service
+
+### Once live
+
+Going live is not the finish line. A live service is checked from time to time to confirm it still meets user needs and the standards. If a service stops being maintained or measured, it may be asked to fix this or be retired.
+
+### How to prepare
+
+You do not need a polished presentation – you need honest evidence. Read the standards, gather real artefacts (user research, prototypes, test results, decisions, performance data), be honest about gaps, and contact GovTech at [info@govtech.bb](mailto:info@govtech.bb) before you reach the gate.
+
+<!-- TODO: confirm the exact sign-off roles at each gate with GovTech before publishing. The default assumption is that GovTech assesses and MDAs sign off in early phases, with GovTech's role in sign-off growing as the service gets closer to live. -->
+
 ## Make sure your service meets your users' needs
 
 Users should continuously be engaged and involved from the initial design all the way through development, implementation, and improvement of the service.

@@ -59,7 +59,7 @@ Best for commodity functions where the market is mature and competitive: appoint
 
 **Build on DPI / adopt Digital Public Goods**
 
-DPI components – such as OpenCRVS for civil registration, MOSIP for identity, or X-Road for interoperability – offer a middle path: technical sovereignty without full build costs. You get the benefit of a community-maintained codebase while retaining control over your data and the ability to customise for local needs.
+DPI components – shared open-source building blocks for capabilities like identity, payments, data exchange and civil registration, maintained by international communities – offer a middle path: technical sovereignty without full build costs. You get the benefit of a community-maintained codebase while retaining control over your data and the ability to customise for local needs.
 
 This approach works well for growing-capability governments like Barbados, provided you work with an experienced implementation partner who prioritises knowledge transfer. The risk is a different form of lock-in if the partner, rather than the government team, holds all the implementation knowledge. The same knowledge transfer disciplines described in the agile procurement guidance apply here.
 
@@ -130,15 +130,9 @@ Use this unless you have a specific reason not to. If you do depart from it, you
 
 The specific hosting and analytics tools GovTech uses as standard should be confirmed with the GovTech engineering team. The recommendations above are sensible defaults, not settled policy.
 
-### When to reach for the heavier DPI components instead
+### When the default stack is not enough
 
-The default stack is for simple services. Some needs are bigger than a front end and a form, and for those you should adopt a shared Digital Public Infrastructure (DPI) component rather than build your own. Reach for these when your service touches a foundational government capability:
-
-- **OpenCRVS** – for civil registration, such as recording births, deaths, and marriages. Reach for it when your service is the registry itself, not just a form that feeds one.
-- **MOSIP** – for foundational digital identity. Reach for it when your service needs to establish or verify who someone is at a national level, rather than manage its own small login.
-- **X-Road** – for secure data exchange between government systems. Reach for it when your service must share data across agencies, rather than holding a copy of everything itself.
-
-These components are described more fully in "The role of Digital Public Infrastructure" below. The rule of thumb is simple: build the simple service on the default stack, but do not rebuild the foundations – adopt the shared component. If you find yourself writing your own identity system, your own registry, or your own cross-agency data exchange, stop and check whether a DPI component already exists.
+The default stack is for simple services. Some needs are bigger than a front end and a form – a full registry, a national identity system, a cross-agency data exchange – and those are decisions to make with GovTech rather than solve inside a single service team. The rule of thumb: build the simple service on the default stack, but do not rebuild the foundations. If you find yourself writing your own identity system, your own registry, or your own cross-agency data exchange, stop and talk to GovTech first.
 
 ## Avoiding vendor dependency
 
@@ -168,7 +162,7 @@ The benefits are significant: lower cost than custom builds, faster implementati
 
 The key requirement is that government builds the internal capability to deploy, configure, and maintain these components – or works with implementation partners under contracts that enforce genuine knowledge transfer. Adopting DPI without building capability simply shifts the dependency from a commercial vendor to an implementation partner.
 
-Barbados is already exploring this path through initiatives like the OpenCRVS civil registration system. The principle should extend to other foundational services as GovTech's capability grows.
+Barbados does not yet run a DPI stack, but the principle is worth keeping in view for foundational services as GovTech's capability grows.
 
 ## Making the decision
 

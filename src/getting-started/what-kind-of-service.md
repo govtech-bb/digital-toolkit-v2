@@ -1,9 +1,13 @@
 ---
 layout: layouts/article.njk
-title: Service type definitions
-lede: A shared vocabulary for the types of services government teams build. These definitions help teams agree what a service is, scope it correctly, and choose the right approach to delivery.
+title: What kind of service are you building?
+lede: A shared vocabulary for the four types of government service in Barbados. Situating yours helps you avoid over-engineering something small or under-scoping something large.
 ---
-There are four types, from the simplest to the most involved:
+Not every government service is the same size. Government work in Barbados falls into four types, from the simplest to the most involved. Knowing where yours sits is a useful first step: it tells you roughly what shape of team you need, what a sensible technical approach looks like, and what you will be measured against.
+
+If you are just joining a team, one of the first conversations to have is where the service you are building fits in this list. If people on the team disagree, the scope probably has not been settled yet.
+
+The four types, from simplest to most involved:
 
 1. Content
 2. Smart content (also called smart tools)
@@ -20,6 +24,8 @@ Content is published as flat files rendered on gov.bb and does not need a conten
 
 **Example:** [Get a document notarised](https://alpha.gov.bb/travel-id-citizenship/get-a-document-notarised).
 
+**What to build with:** [The GovTech platform for a content service](/getting-started/the-govtech-platform.html#for-a-content-service).
+
 ## Smart content
 
 More than plain content. Built with HTML, CSS and JavaScript, it provides guidance and information while also handling basic logic – for example calculators (tax, pension) or lookups such as the next public holiday in Barbados.
@@ -29,6 +35,8 @@ It is essentially a front-end-only website: there is no back end.
 **Defining characteristic:** contains logic, but no two-way communication with an external service or database access. It may read data from an API or a flat file containing key information. A service that only reads from an API without caching still sits here; if a caching layer is added to protect the upstream service from load, it should usually be reclassified as a complex service.
 
 **Example:** [Bank holidays](https://alpha.gov.bb/bank-holiday-calendar?year=2026).
+
+**What to build with:** [The GovTech platform for a smart content service](/getting-started/the-govtech-platform.html#for-a-smart-content-service).
 
 ## Simple service
 
@@ -42,6 +50,8 @@ Case management is the default for new forms. Email is still useful, particularl
 
 **Example:** [Get a copy of a birth certificate](https://alpha.gov.bb/family-birth-relationships/get-birth-certificate).
 
+**What to build with:** [The GovTech platform for a simple service](/getting-started/the-govtech-platform.html#for-a-simple-service).
+
 ## Complex service
 
 A service with substantial functionality, workflow or logic beyond capturing and routing a single submission. Examples include a case management system, or the job letters service for the Ministry of Education, which lets staff request evidence of their employment to use for purchases and similar needs.
@@ -52,6 +62,8 @@ Even if they are not served from alpha.gov.bb, complex services should sit on th
 
 **Example:** A polyclinic check-in service (an exception: hosted on AWS and does not use the GovTech design system, since it is only ever accessed from inside a polyclinic).
 
+**What to build with:** [The GovTech platform for a complex service](/getting-started/the-govtech-platform.html#for-a-complex-service).
+
 ## At a glance
 
 | Type | Logic | External connections | Sends data to an MDA | Typical example |
@@ -60,3 +72,8 @@ Even if they are not served from alpha.gov.bb, complex services should sit on th
 | Smart content | Client-side only | APIs | No | Tax calculator, next public holiday |
 | Simple service | Form logic | Case management or email | Yes | An application form |
 | Complex service | Workflow and state | APIs, databases, case management | Yes | Case management, job letters service |
+
+## Where to get help
+
+- Not sure which type your service is? Contact GovTech at [info@govtech.bb](mailto:info@govtech.bb) – the earlier this is settled, the less rework it costs.
+- The [Barbados Digital Service Standards](https://github.com/govtech-bb/Barbados-Digital-Service-Standards) apply to every type, though they are lightest for content and heaviest for complex services.

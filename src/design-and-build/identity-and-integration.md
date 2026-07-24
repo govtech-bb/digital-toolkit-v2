@@ -48,16 +48,13 @@ A **system of record** is the authoritative source for a particular set of data 
 
 The general principle: **read from the source of truth, do not duplicate it.** Keeping your own copy of data that lives authoritatively elsewhere creates two versions that drift apart, and doubles the amount of personal data at risk.
 
-### X-Road and how government systems connect
+### How to connect to a system of record
 
-Barbados uses **X-Road** as the layer through which government systems exchange data securely. Rather than each system building direct, one-off connections to every other system, systems connect through X-Road, which handles secure, logged, standardised data exchange between them.
-
-<!-- TODO: confirm current X-Road onboarding steps, the responsible team/authority, prerequisites, and any lead times with GovTech. Do not invent endpoints, security-server configuration details, member/subsystem codes, or credential-handling steps. -->
-Onboarding to X-Road is a managed process, not a self-service one. At a high level you should expect it to involve:
+There is no shared, standardised data-exchange layer between Barbados government systems today. Each connection is arranged individually with the organisation that owns the system you need to read from or write to. That means you should expect the process to look like:
 
 1. **A conversation with GovTech** about the data you need, which system holds it, and why.
 2. **Approval from the organisation that owns the data** (the data owner), usually recorded in a data-sharing agreement – see below.
-3. **Technical onboarding** to connect your service to X-Road, carried out with the team responsible for X-Road. GovTech will point you to that team and the current steps.
+3. **Technical integration**, agreed with the system owner. The mechanism depends on what the owning system supports.
 4. **Testing and assurance** before any real data flows, to confirm the connection is secure and only exposes what was agreed.
 
 Do not assume you can connect to a system of record simply because it exists. Access is granted deliberately, for a defined purpose, by the organisation that owns the data.
@@ -65,13 +62,13 @@ Do not assume you can connect to a system of record simply because it exists. Ac
 ### What to ask GovTech about integration
 
 - which system holds the data you need, and who owns it
-- whether that system is already connected to X-Road
-- what the current onboarding process and lead times are
+- how that system can be integrated with, and whether an integration already exists
+- what the current process and lead times are
 - what your service is allowed to do – read only, or read and write
 
 ## Data-sharing agreements
 
-Whenever one organisation lets another read or write personal data it holds, that arrangement should be written down in a **data-sharing agreement** (sometimes called a data-sharing agreement or memorandum of understanding). It is the document that makes the sharing lawful, clear and accountable. You will usually need one in place before any real data flows – including before X-Road onboarding completes.
+Whenever one organisation lets another read or write personal data it holds, that arrangement should be written down in a **data-sharing agreement** (sometimes called a data-sharing agreement or memorandum of understanding). It is the document that makes the sharing lawful, clear and accountable. You will usually need one in place before any real data flows.
 
 ### What a data-sharing agreement is for
 
@@ -120,6 +117,6 @@ If you are procuring the service, these expectations belong in your contract, so
 
 Identity, integration and data sharing are the parts of a service where early advice saves the most time and money. You do not need to have the answers before you get in touch – working them out is exactly what GovTech can help with.
 
-- Contact GovTech at [info@govtech.bb](mailto:info@govtech.bb) to discuss identity, connecting to a system of record, X-Road onboarding, or a data-sharing agreement. Get in touch during discovery, before you commit your design or your procurement to a particular approach.
+- Contact GovTech at [info@govtech.bb](mailto:info@govtech.bb) to discuss identity, connecting to a system of record, or a data-sharing agreement. Get in touch during discovery, before you commit your design or your procurement to a particular approach.
 - The [Barbados Digital Service Standards](https://github.com/govtech-bb/Barbados-Digital-Service-Standards) set out what your service must meet, including Standard 11 on trust, safety and confidentiality.
 - Read [how GovTech works with MDAs](/get-help/how-govtech-works-with-mdas.html) to understand the ways GovTech can support you, including architecture and security assurance.

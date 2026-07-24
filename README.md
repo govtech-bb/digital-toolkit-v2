@@ -60,7 +60,7 @@ each article. Heading IDs are slugified from the heading text.
    so you only ever write them in one place. Optionally add a tag:
 
    ```yaml
-   - page: getting-started/introduction-to-digital-transformation.md
+   - page: getting-started/what-kind-of-service.md
      tag: { variant: new, label: New }
    ```
 
