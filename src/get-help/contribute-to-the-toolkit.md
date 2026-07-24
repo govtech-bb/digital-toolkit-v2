@@ -33,7 +33,7 @@ If you do not use GitHub, email **[info@govtech.bb](mailto:info@govtech.bb)** in
 
 ## What we expect from content
 
-Every page in the toolkit is written in plain language, for the reader with the least confidence. Before you write or edit a page, read **[Writing content for Barbadians](/design-and-build/writing-content-for-barbadians.html)**. It explains how we write: short sentences, common words, clear structure, and a consistent style across all government services.
+Every page in the toolkit is written in plain language, for the reader with the least confidence. Before you write or edit a page, read **[Writing content for Barbadians](/design-and-build/writing-content-for-barbadians/)**. It explains how we write: short sentences, common words, clear structure, and a consistent style across all government services.
 
 ## What happens next
 

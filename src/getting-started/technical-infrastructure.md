@@ -3,7 +3,7 @@ layout: layouts/article.njk
 title: Technical infrastructure
 lede: What the GovTech infrastructure team provides for services that need something beyond the standard platform – and how to engage them.
 ---
-The [GovTech platform](/getting-started/the-govtech-platform.html) is designed so that a team building an ordinary service does not have to think about infrastructure. If you use the design system, the platform hosting, and the shared components, you can deploy without a networking conversation.
+The [GovTech platform](/getting-started/the-govtech-platform/) is designed so that a team building an ordinary service does not have to think about infrastructure. If you use the design system, the platform hosting, and the shared components, you can deploy without a networking conversation.
 
 This page is for what happens when that stops being true. As soon as your service needs something outside the standard offer – a different hosting model, private networking, a dedicated environment, connectivity to a specific ministry's system – you have crossed from platform into infrastructure. That is where this page picks up.
 
@@ -26,9 +26,9 @@ Before that first conversation, be ready to describe:
 
 The GovTech infrastructure team's remit includes:
 
-- **Hosting environments** – for services that need somewhere beyond an `alpha.gov.bb` subdomain, for example services with their own back end, background workers, or a database.
+- **Hosting environments** – for services that need more than a standard `alpha.gov.bb` subdomain can provide, for example services with their own back end, background workers, or a database.
 - **Networking and connectivity** – VPNs, private endpoints, and connectivity into networks that are not publicly reachable, when your service needs to talk to a specific ministry system.
-- **Domains and TLS** – provisioning `*.gov.bb` service domains once a service is past alpha, and the certificates that go with them.
+- **Domains and TLS** – provisioning subdomains of `alpha.gov.bb` for services, and the certificates that go with them.
 - **Secrets and credentials** – a shared, secure way to store and rotate API keys, database credentials and other secrets, so they never sit in code or shared documents.
 - **Monitoring, logging and alerting** – the observability layer that lets someone see whether the service is healthy in production and be paged when it is not.
 - **Backup and disaster recovery** – how service data is backed up, how often, and how it would be restored if lost.
@@ -52,4 +52,4 @@ A first meeting is more productive if you bring the right questions:
 ## Where to get help
 
 - Contact GovTech at [info@govtech.bb](mailto:info@govtech.bb) to be connected with the infrastructure team. Get in touch during discovery or early alpha – decisions about hosting, networking and environments are much cheaper to make early.
-- If you can build on the [GovTech platform](/getting-started/the-govtech-platform.html) without needing any of this, do that. It is faster and cheaper for both your team and GovTech.
+- If you can build on the [GovTech platform](/getting-started/the-govtech-platform/) without needing any of this, do that. It is faster and cheaper for both your team and GovTech.

@@ -120,7 +120,7 @@ Use this unless you have a specific reason not to. If you do depart from it, you
 
 ### Hosting, deploy and analytics
 
-**Deploy to a subdomain of `alpha.gov.bb`.** While a service is in alpha, host it at an address like `your-service.alpha.gov.bb`. This keeps alpha services together, and it tells users honestly what phase the service is in.
+**Deploy to a subdomain of `alpha.gov.bb`.** Government digital services in Barbados are published on `alpha.gov.bb`, at a subdomain like `your-service.alpha.gov.bb`. See [about alpha.gov.bb](/getting-started/about-alpha-gov-bb/) for what this is and why.
 
 **Keep hosting boring.** The code should live in a government-owned repository from day one, deployed by an automated pipeline so that any team member can ship a change – and roll it back – without a specialist. Avoid clever infrastructure that only one person understands. Boring, well-understood hosting is easier to hand over and cheaper to run.
 

@@ -22,7 +22,7 @@ Not every service needs the same level of assurance. A service that lets someone
 
 ### Use the government's shared identity approach
 
-Wherever possible, use the government's common approach to identity rather than building your own login and storing your own passwords. Standard 7 of the [Barbados Digital Service Standards](https://github.com/govtech-bb/Barbados-Digital-Service-Standards) asks services to use open, common, interoperable platforms, and a shared identity service is one of these. Reusing it means:
+Wherever possible, use the government's common approach to identity rather than building your own login and storing your own passwords. Standard 7 of the [Barbados Digital Service Standards](/getting-started/barbados-digital-service-standards/) asks services to use open, common, interoperable platforms, and a shared identity service is one of these. Reusing it means:
 
 - citizens get a consistent, familiar way to sign in across government
 - you do not become responsible for storing and protecting login credentials yourself
@@ -97,7 +97,7 @@ A data-sharing agreement is approved by the **owner of the data** being shared �
 
 ## Security and data protection
 
-Handling personal information is a responsibility, not just a technical task. This is the subject of **Standard 11 of the [Barbados Digital Service Standards](https://github.com/govtech-bb/Barbados-Digital-Service-Standards): "Design for trust, safety, and confidentiality"**. Your service must protect the people whose data it touches, and be trustworthy in how it does so.
+Handling personal information is a responsibility, not just a technical task. This is the subject of **Standard 11 of the [Barbados Digital Service Standards](/getting-started/barbados-digital-service-standards/): "Design for trust, safety, and confidentiality"**. Your service must protect the people whose data it touches, and be trustworthy in how it does so.
 
 **Personally identifiable information (PII)** is any information that identifies a person or could be combined to identify them – names, national identifiers, addresses, dates of birth, contact details, and much more. Treat it with care at every step.
 
@@ -111,12 +111,12 @@ Some practical expectations for any service handling PII:
 - **Plan for things going wrong.** Know how you would detect a breach, who you would tell, and how quickly. Agree this before you go live.
 - **Get security assurance early.** Security decisions are hard to reverse once a service is built. Involve GovTech while the architecture is still on the whiteboard, not after launch.
 
-If you are procuring the service, these expectations belong in your contract, so the supplier is required to meet them. See [what to include in a request for proposals (RFP)](/working-with-suppliers/what-to-include-in-an-rfp.html).
+If you are procuring the service, these expectations belong in your contract, so the supplier is required to meet them. See [what to include in a request for proposals (RFP)](/working-with-suppliers/what-to-include-in-an-rfp/).
 
 ## Where to get help
 
 Identity, integration and data sharing are the parts of a service where early advice saves the most time and money. You do not need to have the answers before you get in touch – working them out is exactly what GovTech can help with.
 
 - Contact GovTech at [info@govtech.bb](mailto:info@govtech.bb) to discuss identity, connecting to a system of record, or a data-sharing agreement. Get in touch during discovery, before you commit your design or your procurement to a particular approach.
-- The [Barbados Digital Service Standards](https://github.com/govtech-bb/Barbados-Digital-Service-Standards) set out what your service must meet, including Standard 11 on trust, safety and confidentiality.
-- Read [how GovTech works with MDAs](/get-help/how-govtech-works-with-mdas.html) to understand the ways GovTech can support you, including architecture and security assurance.
+- The [Barbados Digital Service Standards](/getting-started/barbados-digital-service-standards/) set out what your service must meet, including Standard 11 on trust, safety and confidentiality.
+- Read [how GovTech works with MDAs](/get-help/how-govtech-works-with-mdas/) to understand the ways GovTech can support you, including architecture and security assurance.
