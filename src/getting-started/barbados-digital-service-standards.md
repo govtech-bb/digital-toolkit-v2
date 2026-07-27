@@ -7,7 +7,7 @@ These are the standards by which public-facing digital services in Barbados will
 
 The checklists in the "How to do it" sections contain ideas about how you might practically check if you are building services in line with the standards.
 
-## What to show at each phase gate
+<h2>What to show at each phase gate</h2>
 
 Services are assessed against these standards at the end of each phase – discovery, alpha, beta – and again from time to time once live. An assessor gives one of three outcomes: *met*, *met with conditions*, or *not yet met*. Most services need more than one look before a gate is fully met. That is normal.
 
@@ -50,7 +50,7 @@ You do not need a polished presentation – you need honest evidence. Read the s
 
 <!-- TODO: confirm the exact sign-off roles at each gate with GovTech before publishing. The default assumption is that GovTech assesses and MDAs sign off in early phases, with GovTech's role in sign-off growing as the service gets closer to live. -->
 
-## Make sure your service meets your users' needs
+## 1. Make sure your service meets your users' needs
 
 Users should continuously be engaged and involved from the initial design all the way through development, implementation, and improvement of the service.
 
@@ -98,7 +98,7 @@ This will ensure that users use the service as it meets their needs. If the serv
 
 [Back to contents](#contents)
 
-## Discover, design, build and deliver with a multidisciplinary team
+## 2. Discover, design, build and deliver with a multidisciplinary team
 
 Establish a multidisciplinary team that can discover, design, create and operate the service in a sustainable way.
 
@@ -142,7 +142,7 @@ This will ensure that all skills needed to optimise every stage of service devel
 
 [Back to contents](#contents)
 
-## Ensure that everyone can use the service
+## 3. Ensure that everyone can use the service
 
 The service should be inclusive of the different demographics of the Barbadian public.
 
@@ -188,7 +188,7 @@ The government exists to serve all citizens. The services the government runs mu
 
 [Back to contents](#contents)
 
-## Use simple and relatable language
+## 4. Use simple and relatable language
 
 Use visual, audio, and written language that is familiar to Barbados’ residents and other users of the service.
 
@@ -218,7 +218,7 @@ This will ensure that more users are able to access the service
 
 [Back to contents](#contents)
 
-## Make sure the service works the first time it’s used
+## 5. Make sure the service works the first time it’s used
 
 The service should be simple and intuitive to use.
 
@@ -251,7 +251,7 @@ This ensures that users have a successful experience using the service, and do n
 
 [Back to contents](#contents)
 
-## Choose the right tools and technology
+## 6. Choose the right tools and technology
 
 Put the right tools and technology in place to deliver and sustain the service.
 
@@ -285,7 +285,7 @@ This ensures that the service is built using the most cost-effective tools and t
 
 [Back to contents](#contents)
 
-## Use open, common, interoperable platforms
+## 7. Use open, common, interoperable platforms
 
 Build using and connecting to platforms that already exist as much as possible.
 
@@ -317,7 +317,7 @@ This reduces duplication of effort across the government. This could also help t
 
 [Back to contents](#contents)
 
-## Make the service scalable and sustainable
+## 8. Make the service scalable and sustainable
 
 Plan for, and design sustainability and scalability into the service from the start.
 
@@ -351,7 +351,7 @@ The continuity of funding, tooling and teams is essential for a service having a
 
 [Back to contents](#contents)
 
-## Be open and transparent
+## 9. Be open and transparent
 
 Work in the open and collaborate with other government ministries, departments, and agencies
 
@@ -377,7 +377,7 @@ This will help facilitate knowledge exchange and capability building within the 
 
 [Back to contents](#contents)
 
-## Make sure the service can be continuously improved
+## 10. Make sure the service can be continuously improved
 
 Build a service that is responsive to changing user needs
 
@@ -420,7 +420,7 @@ Continuous improvement means you can respond to changes in user needs, other dat
 
 [Back to contents](#contents)
 
-## Design for trust, safety, and confidentiality
+## 11. Design for trust, safety, and confidentiality
 
 Have and comply with trust and safety requirements
 
@@ -459,7 +459,7 @@ It enhances the social contract between the government and users. It also ensure
 
 [Back to contents](#contents)
 
-## Make it easy for users to find
+## 12. Make it easy for users to find
 
 Have information about the service available where your users can easily learn about it.
 
@@ -490,7 +490,7 @@ For a service to solve users’ needs, the users must first know that it exists.
 
 [Back to contents](#contents)
 
-## Monitor, manage, and measure performance
+## 13. Monitor, manage, and measure performance
 
 Work out what success looks like for your service and identify metrics to measure it.
 

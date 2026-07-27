@@ -14,7 +14,8 @@ These apply to almost everything the government builds and are worth knowing abo
 - **[Barbados Government Design System](https://govtech-bb.github.io/design-system/)** – reusable components, styles and patterns. Any user-facing service should use it. See [using the design system](/design-and-build/using-the-design-system/) for how to install and integrate the packages.
 - **[GovTech GitHub](https://github.com/govtech-bb)** – all code lives here, in a shared organisation. Working in the open is part of the standards. A new team needs each member added to the org and a repository created for the service – agree a repo name with GovTech before it is created, and never start a service in a personal account or a separate organisation.
 - **`alpha.gov.bb`** – the platform on which the Government of Barbados publishes its digital services today. Your service will be published at a subdomain like `your-service.alpha.gov.bb`, regardless of what phase it is in. See [about alpha.gov.bb](/getting-started/about-alpha-gov-bb/).
-- **Identity and system integration** – shared approaches for authenticating users and connecting to government systems of record. See [identity and integrating with government systems](/design-and-build/identity-and-integration/).
+- **Identity** – the shared approach for authenticating users of a government service. See [identifying and authenticating users](/design-and-build/identifying-users/).
+- **Handling personal data** – data-sharing agreements and the expectations for protecting personal information. See [handling personal data safely](/design-and-build/handling-personal-data/).
 
 ### Repositories worth knowing about
 
@@ -39,7 +40,7 @@ Because staging and production are promoted manually, a merge to `main` is not t
 A content service is text-only guidance. The platform pieces you need are the lightest of any type.
 
 - **Author in markdown, deploy via `gov-bb`.** Content lives in the [landing app](https://github.com/govtech-bb/gov-bb/tree/main/apps/landing) inside the gov-bb monorepo, under `apps/landing/src/content/`. Add or update content by raising a pull request – see [#1945](https://github.com/govtech-bb/gov-bb/pull/1945) as a small worked example. Changes deploy through the standard alpha.gov.bb deployment process and are served under [alpha.gov.bb](https://alpha.gov.bb/).
-- **Follow the GovTech style guide** and write at the right reading age. See [writing content for Barbadians](/design-and-build/writing-content-for-barbadians/).
+- **Follow the GovTech style guide** and write at the right reading age. See the [service content standards](https://govtech-bb.github.io/service-content-standards).
 - **Get a GovTech content designer review before publishing.** They catch issues that authors close to the subject often miss.
 
 If your content needs any logic – a calculator, a lookup – it is smart content; see the next section.
@@ -61,7 +62,7 @@ A simple service captures user input and routes it to an MDA. The platform provi
 - **Prototype the form first.** Build a clickable HTML prototype in the [govbb-prototypes](https://github.com/govtech-bb/govbb-prototypes) repository – it includes a generator that produces prototypes from a form specification. Test it with real users before writing any production code. Changing a real form after MDA sign-off is far more expensive than changing a prototype.
 - **Build the real form as a recipe in the Simple Service Builder (SSB).** Once the design is validated, define the form as a JSON "recipe" at `apps/api/src/forms/form-definitions/recipes/{formId}/{version}.json` in the gov-bb monorepo. The [form creation guide](https://github.com/govtech-bb/gov-bb/blob/main/FORM-CREATION-GUIDE.md) and [conventions guide](https://github.com/govtech-bb/gov-bb/blob/main/FORMS.md) explain the schema and the registry of standard fields (name, date of birth, national ID, etc.) you should prefer over hand-rolled fields. See [PR #1442](https://github.com/govtech-bb/gov-bb/pull/1442) for a clean single-form publish, or [PR #2071](https://github.com/govtech-bb/gov-bb/pull/2071) for a form landed alongside its landing pages.
 - **Route submissions to email or case management.** SSB handles both. Case management is the default; email is a stop-gap while an MDA is being onboarded to case management.
-- **Identity, payments and notifications** are shared components SSB integrates with. Use the [shared identity approach](/design-and-build/identity-and-integration/) if your form needs to know who someone is; SSB provides SMS, email and WhatsApp notifications and payment integration out of the box.
+- **Identity, payments and notifications** are shared components SSB integrates with. Use the [shared identity approach](/design-and-build/identifying-users/) if your form needs to know who someone is; SSB provides SMS, email and WhatsApp notifications and payment integration out of the box.
 - **Design system.** Even where SSB provides the form runtime, you may need the [design system](https://govtech-bb.github.io/design-system/) for surrounding pages.
 
 ## For a complex service
@@ -70,8 +71,8 @@ A complex service has substantial workflow, state, or back-office interaction. R
 
 - **Design system.** Build the interface with the [design system](https://govtech-bb.github.io/design-system/) so it looks and behaves like the rest of government.
 - **A repository in the `govtech-bb` GitHub organisation** from day one, deployed via an automated pipeline.
-- **Identity.** Use the shared identity approach for anything involving citizen authentication. See [identity and integrating with government systems](/design-and-build/identity-and-integration/).
-- **Connecting to a system of record.** If your service needs to read from or write to another government system, arrange this early with GovTech and the system owner – there is no self-service integration layer yet. See [identity and integrating with government systems](/design-and-build/identity-and-integration/).
+- **Identity.** Use the shared identity approach for anything involving citizen authentication. See [identifying and authenticating users](/design-and-build/identifying-users/).
+- **Connecting to a system of record.** If your service needs to read from or write to another government system, arrange this early with GovTech and the system owner – there is no self-service integration layer yet.
 - **A default stack for anything else.** React 18/19 and Tailwind CSS 4 are the recommended defaults for public-facing UI. See [technology decisions](/working-with-suppliers/technology-decisions/).
 
 ## Where to get help

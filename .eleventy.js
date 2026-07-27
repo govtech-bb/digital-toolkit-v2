@@ -37,6 +37,10 @@ module.exports = function (eleventyConfig) {
     return collection.find((p) => p.inputPath.endsWith(suffix));
   });
 
+  eleventyConfig.addFilter("isExternal", function (url) {
+    return typeof url === "string" && /^https?:\/\//i.test(url);
+  });
+
   const md = markdownIt({
     html: true,
     linkify: false,

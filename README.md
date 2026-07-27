@@ -29,13 +29,13 @@ Each article's front matter drives its title and lede:
 ```yaml
 ---
 layout: layouts/article.njk
-title: Writing content for Barbadians
-lede: How to write government content that anyone can understand …
+title: Using the Barbados Government Design System
+lede: How to install and use the Barbados Government Design System packages …
 ---
 ```
 
-The output URL is derived from the file path — `src/design-and-build/writing-content-for-barbadians.md`
-becomes `/design-and-build/writing-content-for-barbadians/`.
+The output URL is derived from the file path — `src/design-and-build/using-the-design-system.md`
+becomes `/design-and-build/using-the-design-system/`.
 
 The "Last updated" date shown on the home page is computed at build time from
 the last git commit that touched each file, so there is no `lastUpdated` field
@@ -53,7 +53,7 @@ each article. Heading IDs are slugified from the heading text.
    section under `sections:` and add an item that references the file:
 
    ```yaml
-   - page: design-and-build/writing-content-for-barbadians.md
+   - page: design-and-build/using-the-design-system.md
    ```
 
    The title, description and URL are pulled from the page's own frontmatter,

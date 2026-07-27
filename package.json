@@ -6,7 +6,8 @@
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy",
-    "clean": "rm -rf _site"
+    "clean": "rm -rf _site",
+    "zip": "npm run build && rm -f digital-toolkit.zip && cd _site && zip -rq ../digital-toolkit.zip ."
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",

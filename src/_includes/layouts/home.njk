@@ -30,7 +30,7 @@ tagLabels:
           {% set itemHref  = entry.url        if entry else item.href %}
           {% set itemDesc  = entry.data.lede  if entry else item.desc %}
         <li class="resource-item">
-          <a class="resource-item__link" href="{{ itemHref }}">{{ itemTitle }}</a>
+          <a class="resource-item__link" href="{{ itemHref }}">{{ itemTitle }}{% if itemHref | isExternal %}<svg class="resource-item__external-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="8 7 17 7 17 16"/></svg><span class="visually-hidden"> (external link)</span>{% endif %}</a>
           {% if item.tag %}<span class="tag tag--{{ item.tag }}">{{ tagLabels[item.tag] }}</span>{% endif %}
           <p class="resource-item__desc">{{ itemDesc | safe }}</p>
         </li>

@@ -49,7 +49,7 @@ src/
 
 The important parts to know are:
 
-- **Each page is a markdown (`.md`) file** in a section folder — for example, `src/design-and-build/writing-content-for-barbadians.md`. This is the source you edit.
+- **Each page is a markdown (`.md`) file** in a section folder — for example, `src/design-and-build/using-the-design-system.md`. This is the source you edit.
 - **Eleventy renders each `.md` file into an `.html` page** when the site is built. You do not edit the `.html` — it is generated for you.
 - **The home page lists every page.** The list of sections and links lives in `src/index.njk`. When you add a new page, you also add a link to it here so people can find it.
 
@@ -60,10 +60,10 @@ Every page starts with a short block of settings called front matter. It sets th
 ```yaml
 ---
 layout: layouts/article.njk
-title: Writing content for Barbadians
-lede: How to write government content that anyone can understand …
+title: Using the Barbados Government Design System
+lede: How to install and use the Barbados Government Design System packages …
 lastUpdated: April 2026
-permalink: /design-and-build/writing-content-for-barbadians.html
+permalink: /design-and-build/using-the-design-system.html
 ---
 ```
 
@@ -77,7 +77,7 @@ We write for the public and for busy people in government. Follow the same style
 - **Aim for a low reading age.** Keep sentences to about 15 to 20 words. Split anything longer.
 - **Be consistent with gov.bb.** Match the tone and terms used across Barbados government services. Use British and Barbadian English spelling.
 
-The best guide to our house style is a page in the toolkit itself: **[Writing content for Barbadians](https://barbados-digital-toolkit.alpha.gov.bb/design-and-build/writing-content-for-barbadians.html)**. Read it before you write or edit a page. It covers common words to use, sentence length, page structure, and habits to avoid.
+The best guide to our house style is the **[Service content standards](https://govtech-bb.github.io/service-content-standards)**. Read them before you write or edit a page. They cover common words to use, sentence length, page structure, and habits to avoid.
 
 ## How to propose a change
 
