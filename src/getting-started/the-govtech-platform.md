@@ -24,6 +24,16 @@ There is no single starter repository to clone. Talk to GovTech before you begin
 - [**govbb-prototypes**](https://github.com/govtech-bb/govbb-prototypes) – a collection of HTML prototypes and a prototype generator. Useful for ideas and examples, not a base for a live service.
 - [**design-system**](https://github.com/govtech-bb/design-system) – the components, styles and patterns every service should use. See [using the design system](/design-and-build/using-the-design-system/).
 
+## Deployment environments
+
+Services on the platform deploy through three environments:
+
+- **Sandbox** – deploys automatically on every merge to `main`. Use it to see recent work running end-to-end against integrated services.
+- **Staging** – deployed manually. Use it for final checks before a release – content review, MDA sign-off, anything that needs to happen on something as close to production as possible.
+- **Production** – deployed manually, once staging checks are green. This is what users see.
+
+Because staging and production are promoted manually, a merge to `main` is not the same as a release. Plan promotions deliberately, and communicate before pushing to production.
+
 ## For a content service
 
 A content service is text-only guidance. The platform pieces you need are the lightest of any type.
