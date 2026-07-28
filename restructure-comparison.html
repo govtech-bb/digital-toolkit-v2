@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toolkit restructure — main vs onboarding-journey</title>
+  <style>
+    :root {
+      --bb-navy: #00267F;
+      --bb-header-gold: #FFC726;
+      --bb-link: #1D70B8;
+      --bb-black: #0B0C0C;
+      --bb-dark-grey: #505A5F;
+      --bb-mid-grey: #B1B4B6;
+      --bb-light-grey: #F3F2F1;
+      --bb-white: #FFFFFF;
+      --bb-green: #00703C;
+      --bb-red: #D4351C;
+      --bb-orange: #F47738;
+      --bb-teal: rgb(26, 119, 125);
+      --bb-purple: #4C2C92;
+
+      /* status palette */
+      --new-bg: #E6F4EA;    --new-fg: #00703C;   --new-br: #7CBF98;
+      --moved-bg: #E4EEF7;  --moved-fg: #00267F; --moved-br: #7FA3CC;
+      --removed-bg: #FBE9E7; --removed-fg: #B1301A; --removed-br: #E3A69C;
+      --renamed-bg: #EEE6F5; --renamed-fg: #4C2C92; --renamed-br: #B197D0;
+      --unchanged-bg: #F3F2F1; --unchanged-fg: #505A5F; --unchanged-br: #C6C7C7;
+      --placeholder-bg: #FFF4E5; --placeholder-fg: #A15C1A; --placeholder-br: #E7C695;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { background: var(--bb-light-grey); }
+    body {
+      font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--bb-black);
+      padding: 0 0 80px;
+    }
+
+    header.top {
+      background: var(--bb-navy);
+      color: var(--bb-white);
+      padding: 40px 0 32px;
+      border-bottom: 6px solid var(--bb-header-gold);
+    }
+    header.top .wrap { max-width: 1400px; margin: 0 auto; padding: 0 32px; }
+    header.top h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 6px; }
+    header.top p  { color: #D4DCEA; font-size: 15px; max-width: 780px; }
+    header.top code { background: rgba(255,255,255,0.12); padding: 1px 6px; border-radius: 3px; font-size: 13px; }
+
+    .wrap { max-width: 1400px; margin: 0 auto; padding: 0 32px; }
+
+    .legend {
+      display: flex; flex-wrap: wrap; gap: 10px 18px;
+      margin: 24px auto 8px;
+      padding: 16px 20px;
+      background: var(--bb-white);
+      border: 1px solid var(--bb-mid-grey);
+      border-radius: 6px;
+    }
+    .legend h2 {
+      width: 100%;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--bb-dark-grey);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .legend .swatch {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px;
+      color: var(--bb-black);
+    }
+    .swatch .dot { width: 11px; height: 11px; border-radius: 3px; display: inline-block; border: 1px solid; }
+
+    .cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 24px;
+      align-items: start;
+    }
+    @media (max-width: 1000px) { .cols { grid-template-columns: 1fr; } }
+
+    .col {
+      background: var(--bb-white);
+      border: 1px solid var(--bb-mid-grey);
+      border-radius: 6px;
+      padding: 20px 22px 26px;
+    }
+    .col.branch { border-top: 4px solid var(--bb-navy); }
+    .col.main   { border-top: 4px solid var(--bb-dark-grey); }
+
+    .col .colhead {
+      display: flex; align-items: baseline; justify-content: space-between;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--bb-light-grey);
+    }
+    .col .colhead h2 { font-size: 20px; letter-spacing: -0.01em; }
+    .col .colhead .ref {
+      font-family: ui-monospace, Menlo, monospace;
+      font-size: 12px;
+      color: var(--bb-dark-grey);
+      background: var(--bb-light-grey);
+      padding: 2px 8px;
+      border-radius: 3px;
+    }
+
+    .section {
+      margin-bottom: 20px;
+      border: 1px solid var(--bb-light-grey);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .section:last-child { margin-bottom: 0; }
+    .section.is-new { border-color: var(--new-br); }
+    .section.is-removed { border-color: var(--removed-br); }
+
+    .section h3 {
+      font-size: 15px;
+      background: var(--bb-light-grey);
+      padding: 10px 14px;
+      border-bottom: 1px solid #E5E4E3;
+      display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    }
+    .section.is-new h3 { background: var(--new-bg); color: var(--new-fg); border-bottom-color: var(--new-br); }
+    .section.is-removed h3 { background: var(--removed-bg); color: var(--removed-fg); border-bottom-color: var(--removed-br); text-decoration: line-through; }
+
+    .section .desc { font-size: 12.5px; color: var(--bb-dark-grey); padding: 8px 14px 4px; }
+
+    ul.items { list-style: none; padding: 6px 8px 10px; }
+    ul.items li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 8px;
+      padding: 8px 8px;
+      align-items: start;
+      border-radius: 4px;
+    }
+    ul.items li + li { border-top: 1px dashed #ECEBEA; }
+
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 2px 7px;
+      border-radius: 3px;
+      border: 1px solid;
+      white-space: nowrap;
+    }
+    .badge.new       { background: var(--new-bg); color: var(--new-fg); border-color: var(--new-br); }
+    .badge.moved     { background: var(--moved-bg); color: var(--moved-fg); border-color: var(--moved-br); }
+    .badge.removed   { background: var(--removed-bg); color: var(--removed-fg); border-color: var(--removed-br); }
+    .badge.renamed   { background: var(--renamed-bg); color: var(--renamed-fg); border-color: var(--renamed-br); }
+    .badge.unchanged { background: var(--unchanged-bg); color: var(--unchanged-fg); border-color: var(--unchanged-br); }
+    .badge.placeholder { background: var(--placeholder-bg); color: var(--placeholder-fg); border-color: var(--placeholder-br); }
+
+    .item .title { font-weight: 500; color: var(--bb-black); }
+    .item .title .kind {
+      display: inline-block;
+      font-size: 11px;
+      color: var(--bb-dark-grey);
+      font-weight: 400;
+      margin-left: 6px;
+    }
+    .item .note {
+      font-size: 12px;
+      color: var(--bb-dark-grey);
+      margin-top: 2px;
+    }
+    .item .note .arrow { color: var(--bb-navy); font-weight: 600; }
+    .item .note .from  { color: var(--bb-dark-grey); }
+
+    li.strike .title { color: var(--bb-dark-grey); text-decoration: line-through; }
+
+    .summary {
+      margin-top: 32px;
+      background: var(--bb-white);
+      border: 1px solid var(--bb-mid-grey);
+      border-radius: 6px;
+      padding: 22px 26px;
+    }
+    .summary h2 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--bb-dark-grey);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    @media (max-width: 900px) { .summary-grid { grid-template-columns: repeat(2, 1fr); } }
+    .stat { padding: 12px 14px; border-radius: 5px; border: 1px solid; }
+    .stat .n { font-size: 24px; font-weight: 700; line-height: 1.1; }
+    .stat .k { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px; }
+    .stat.new      { background: var(--new-bg); color: var(--new-fg); border-color: var(--new-br); }
+    .stat.moved    { background: var(--moved-bg); color: var(--moved-fg); border-color: var(--moved-br); }
+    .stat.removed  { background: var(--removed-bg); color: var(--removed-fg); border-color: var(--removed-br); }
+    .stat.renamed  { background: var(--renamed-bg); color: var(--renamed-fg); border-color: var(--renamed-br); }
+  </style>
+</head>
+<body>
+
+  <header class="top">
+    <div class="wrap">
+      <h1>Digital Toolkit — homepage restructure</h1>
+      <p>How the top-level navigation and page inventory changed between <code>main</code> and <code>onboarding-journey</code>. Both columns reflect the sections and items on the homepage in the order they appear.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <div class="legend">
+      <h2>Legend</h2>
+      <span class="swatch"><span class="dot" style="background:var(--new-bg);border-color:var(--new-br)"></span>New page or section on the branch</span>
+      <span class="swatch"><span class="dot" style="background:var(--moved-bg);border-color:var(--moved-br)"></span>Moved between sections</span>
+      <span class="swatch"><span class="dot" style="background:var(--renamed-bg);border-color:var(--renamed-br)"></span>Renamed / rewritten</span>
+      <span class="swatch"><span class="dot" style="background:var(--removed-bg);border-color:var(--removed-br)"></span>Removed on the branch</span>
+      <span class="swatch"><span class="dot" style="background:var(--unchanged-bg);border-color:var(--unchanged-br)"></span>Unchanged</span>
+      <span class="swatch"><span class="dot" style="background:var(--placeholder-bg);border-color:var(--placeholder-br)"></span>Placeholder / unbuilt</span>
+    </div>
+
+    <div class="cols">
+
+      <!-- ============ MAIN ============ -->
+      <section class="col main" aria-label="main branch">
+        <div class="colhead">
+          <h2>main</h2>
+          <span class="ref">git branch: main</span>
+        </div>
+
+        <div class="section">
+          <h3>1. Getting started</h3>
+          <p class="desc">Understand how digital transformation works in Government and what GovTech expects</p>
+          <ul class="items">
+            <li>
+              <span class="badge moved">moved</span>
+              <div class="item">
+                <div class="title">Barbados Digital Service Standards</div>
+                <div class="note"><span class="arrow">→</span> Meeting the standards</div>
+              </div>
+            </li>
+            <li class="strike">
+              <span class="badge removed">removed</span>
+              <div class="item">
+                <div class="title">Introduction to digital transformation</div>
+                <div class="note">Page deleted on branch</div>
+              </div>
+            </li>
+            <li>
+              <span class="badge renamed">renamed</span>
+              <div class="item">
+                <div class="title">Service type definitions</div>
+                <div class="note"><span class="arrow">→</span> "What kind of service are you building?" (Building a service)</div>
+              </div>
+            </li>
+            <li class="strike">
+              <span class="badge removed">removed</span>
+              <div class="item">
+                <div class="title">Assess your service's readiness <span class="kind">(placeholder)</span></div>
+                <div class="note">Placeholder link removed</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>2. Design and build</h3>
+          <p class="desc">Resources for teams and suppliers designing and building government digital services</p>
+          <ul class="items">
+            <li>
+              <span class="badge renamed">replaced</span>
+              <div class="item">
+                <div class="title">Barbados Government Design System <span class="kind">(external link)</span></div>
+                <div class="note"><span class="arrow">→</span> Replaced by internal page "Using the Barbados Government Design System"</div>
+              </div>
+            </li>
+            <li>
+              <span class="badge moved">moved</span>
+              <div class="item">
+                <div class="title">Writing content for Barbadians</div>
+                <div class="note"><span class="arrow">→</span> Meeting the standards</div>
+              </div>
+            </li>
+            <li class="strike">
+              <span class="badge removed">removed</span>
+              <div class="item">
+                <div class="title">GovTech GitHub <span class="kind">(external link)</span></div>
+                <div class="note">No longer on homepage; referenced from The GovTech platform</div>
+              </div>
+            </li>
+            <li>
+              <span class="badge moved">moved</span>
+              <div class="item">
+                <div class="title">Service status dashboard <span class="kind">(external link)</span></div>
+                <div class="note"><span class="arrow">→</span> Get help from GovTech</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section is-removed">
+          <h3>3. Put simple forms online</h3>
+          <p class="desc">For straightforward data collection that doesn't need a custom-built service</p>
+          <ul class="items">
+            <li class="strike">
+              <span class="badge removed">removed</span>
+              <div class="item"><div class="title">Work with the GovTech Forms team</div></div>
+            </li>
+            <li class="strike">
+              <span class="badge removed">removed</span>
+              <div class="item"><div class="title">GovTech Form Builder <span class="kind">(placeholder)</span></div></div>
+            </li>
+            <li class="strike">
+              <span class="badge removed">removed</span>
+              <div class="item"><div class="title">When to use the form builder vs. a custom service <span class="kind">(placeholder)</span></div></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>4. Working with suppliers</h3>
+          <p class="desc">How to procure digital services in a way that leads to better outcomes</p>
+          <ul class="items">
+            <li>
+              <span class="badge unchanged">unchanged</span>
+              <div class="item"><div class="title">Guidance on agile procurement</div></div>
+            </li>
+            <li>
+              <span class="badge unchanged">unchanged</span>
+              <div class="item"><div class="title">What to include in an RFP</div></div>
+            </li>
+            <li>
+              <span class="badge unchanged">unchanged</span>
+              <div class="item"><div class="title">Technology decisions</div></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>5. Get help from GovTech</h3>
+          <p class="desc">We're here to support MDAs at every stage of digital service delivery</p>
+          <ul class="items">
+            <li>
+              <span class="badge unchanged">unchanged</span>
+              <div class="item"><div class="title">Contact GovTech</div></div>
+            </li>
+            <li>
+              <span class="badge moved">moved</span>
+              <div class="item">
+                <div class="title">How GovTech works with MDAs</div>
+                <div class="note"><span class="arrow">→</span> About GovTech and alpha.gov.bb</div>
+              </div>
+            </li>
+            <li class="strike">
+              <span class="badge removed">removed</span>
+              <div class="item">
+                <div class="title">Service assessments <span class="kind">(placeholder)</span></div>
+                <div class="note">Placeholder link removed</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ BRANCH ============ -->
+      <section class="col branch" aria-label="onboarding-journey branch">
+        <div class="colhead">
+          <h2>onboarding-journey</h2>
+          <span class="ref">git branch: onboarding-journey</span>
+        </div>
+
+        <div class="section is-new">
+          <h3>1. About GovTech and alpha.gov.bb <span class="badge new">new section</span></h3>
+          <p class="desc">Who GovTech is, how it works with MDAs, and what alpha.gov.bb is</p>
+          <ul class="items">
+            <li>
+              <span class="badge new">new</span>
+              <div class="item"><div class="title">About alpha.gov.bb</div></div>
+            </li>
+            <li>
+              <span class="badge moved">moved in</span>
+              <div class="item">
+                <div class="title">How GovTech works with MDAs</div>
+                <div class="note"><span class="from">from</span> Get help from GovTech</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section is-new">
+          <h3>2. Building a service <span class="badge new">new section</span></h3>
+          <p class="desc">If you are new to building a government digital service, read these in order</p>
+          <ul class="items">
+            <li>
+              <span class="badge renamed">renamed</span>
+              <div class="item">
+                <div class="title">What kind of service are you building?</div>
+                <div class="note"><span class="from">was</span> "Service type definitions" in Getting started</div>
+              </div>
+            </li>
+            <li>
+              <span class="badge new">new</span>
+              <div class="item"><div class="title">The GovTech platform</div></div>
+            </li>
+            <li>
+              <span class="badge new">new</span>
+              <div class="item"><div class="title">Technical infrastructure</div></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section is-new">
+          <h3>3. Meeting the standards <span class="badge new">new section</span></h3>
+          <p class="desc">What your service must meet, and the practical guidance for meeting it</p>
+          <ul class="items">
+            <li>
+              <span class="badge moved">moved in</span>
+              <div class="item">
+                <div class="title">Barbados Digital Service Standards</div>
+                <div class="note"><span class="from">from</span> Getting started</div>
+              </div>
+            </li>
+            <li>
+              <span class="badge new">new</span>
+              <div class="item">
+                <div class="title">Using the Barbados Government Design System</div>
+                <div class="note"><span class="from">replaces</span> external link on main</div>
+              </div>
+            </li>
+            <li>
+              <span class="badge moved">moved in</span>
+              <div class="item">
+                <div class="title">Writing content for Barbadians</div>
+                <div class="note"><span class="from">from</span> Design and build</div>
+              </div>
+            </li>
+            <li>
+              <span class="badge new">new</span>
+              <div class="item"><div class="title">Identity and integrating with government systems</div></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>4. Working with suppliers</h3>
+          <p class="desc">How to procure digital services in a way that leads to better outcomes</p>
+          <ul class="items">
+            <li>
+              <span class="badge unchanged">unchanged</span>
+              <div class="item"><div class="title">Guidance on agile procurement</div></div>
+            </li>
+            <li>
+              <span class="badge unchanged">unchanged</span>
+              <div class="item"><div class="title">What to include in an RFP</div></div>
+            </li>
+            <li>
+              <span class="badge unchanged">unchanged</span>
+              <div class="item"><div class="title">Technology decisions</div></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>5. Get help from GovTech</h3>
+          <p class="desc">We're here to support MDAs at every stage of digital service delivery</p>
+          <ul class="items">
+            <li>
+              <span class="badge unchanged">unchanged</span>
+              <div class="item"><div class="title">Contact GovTech</div></div>
+            </li>
+            <li>
+              <span class="badge new">new</span>
+              <div class="item"><div class="title">Contribute to the toolkit</div></div>
+            </li>
+            <li>
+              <span class="badge moved">moved in</span>
+              <div class="item">
+                <div class="title">Service status dashboard</div>
+                <div class="note"><span class="from">from</span> Design and build</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <div class="summary">
+      <h2>At a glance</h2>
+      <div class="summary-grid">
+        <div class="stat new"><div class="n">3</div><div class="k">New sections</div></div>
+        <div class="stat new"><div class="n">6</div><div class="k">New pages</div></div>
+        <div class="stat moved"><div class="n">4</div><div class="k">Pages moved between sections</div></div>
+        <div class="stat removed"><div class="n">7</div><div class="k">Homepage items removed<br>(1 deleted page, 4 placeholders, 2 links moved off the homepage)</div></div>
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>
