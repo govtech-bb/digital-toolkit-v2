@@ -1,7 +1,7 @@
 ---
 layout: layouts/article.njk
 title: What kind of service are you building?
-lede: A shared vocabulary for the four types of government service in Barbados. Situating yours helps you avoid over-engineering something small or under-scoping something large.
+lede: A shared vocabulary for the types of services government teams build. These definitions help teams agree what a service is, scope it correctly, and choose the right approach to delivery.
 ---
 Not every government service is the same size. Government work in Barbados falls into four types, from the simplest to the most involved. Knowing where yours sits is a useful first step: it tells you roughly what shape of team you need, what a sensible technical approach looks like, and what you will be measured against.
 
@@ -75,5 +75,5 @@ Complex services are published at a subdomain of `alpha.gov.bb` like any other s
 
 ## Where to get help
 
-- Not sure which type your service is? Contact GovTech at [info@govtech.bb](mailto:info@govtech.bb) – the earlier this is settled, the less rework it costs.
+- Not sure which type your service is? Contact GovTech at [{{ site.email }}](mailto:{{ site.email }}) – the earlier this is settled, the less rework it costs.
 - The [Barbados Digital Service Standards](/getting-started/barbados-digital-service-standards/) apply to every type, though they are lightest for content and heaviest for complex services.

@@ -46,7 +46,7 @@ Going live is not the finish line. A live service is checked from time to time t
 
 ### How to prepare
 
-You do not need a polished presentation – you need honest evidence. Read the standards, gather real artefacts (user research, prototypes, test results, decisions, performance data), be honest about gaps, and contact GovTech at [info@govtech.bb](mailto:info@govtech.bb) before you reach the gate.
+You do not need a polished presentation – you need honest evidence. Read the standards, gather real artefacts (user research, prototypes, test results, decisions, performance data), be honest about gaps, and contact GovTech at [{{ site.email }}](mailto:{{ site.email }}) before you reach the gate.
 
 <!-- TODO: confirm the exact sign-off roles at each gate with GovTech before publishing. The default assumption is that GovTech assesses and MDAs sign off in early phases, with GovTech's role in sign-off growing as the service gets closer to live. -->
 

@@ -162,7 +162,7 @@ The benefits are significant: lower cost than custom builds, faster implementati
 
 The key requirement is that government builds the internal capability to deploy, configure, and maintain these components – or works with implementation partners under contracts that enforce genuine knowledge transfer. Adopting DPI without building capability simply shifts the dependency from a commercial vendor to an implementation partner.
 
-Barbados does not yet run a DPI stack, but the principle is worth keeping in view for foundational services as GovTech's capability grows.
+Barbados is already exploring this path. The principle should extend to other foundational services as GovTech's capability grows.
 
 ## Making the decision
 

@@ -5,11 +5,11 @@ lede: How to fix an error, improve a page or suggest a resource for the Digital 
 ---
 The Digital Toolkit is only useful if it stays accurate, clear and up to date. It gets better when the people who use it tell us what is missing, fix what is wrong, and share what they have learned.
 
-This page is for anyone – inside GovTech or in a ministry, department or agency (MDA) – who wants to help improve the toolkit. You do not need to be a technical person.
+This page is for anyone – inside GovTech or in a ministry, department or agency – who wants to help improve the toolkit. You do not need to be a technical person.
 
 ## Who can contribute
 
-Anyone can. You do not need to work for GovTech. We especially welcome help from people in MDAs who use the toolkit in their day-to-day work, and from suppliers who build government services.
+Anyone can. You do not need to work for GovTech. We especially welcome help from people who use the toolkit in their day-to-day work, and from suppliers who build government services.
 
 ## What you can help with
 
@@ -29,7 +29,7 @@ There are two ways, depending on how comfortable you are with GitHub.
 
 If you use GitHub, you can open an issue or a pull request in the toolkit's code repository. The full steps are in the **[contributing guide on GitHub](https://github.com/govtech-bb/digital-toolkit-v2/blob/main/CONTRIBUTING.md)**.
 
-If you do not use GitHub, email **[info@govtech.bb](mailto:info@govtech.bb)** instead. Tell us which page you are looking at and what you would like to change or add. The GovTech team will make the change for you. You will not miss out by not knowing GitHub.
+If you do not use GitHub, email **[{{ site.email }}](mailto:{{ site.email }})** instead. Tell us which page you are looking at and what you would like to change or add. The GovTech team will make the change for you. You will not miss out by not knowing GitHub.
 
 ## What we expect from content
 
@@ -47,4 +47,4 @@ We review every contribution, so please do not be put off if we suggest edits. I
 
 ## Get help
 
-If you are unsure about anything, contact the GovTech team at [info@govtech.bb](mailto:info@govtech.bb). We are happy to help you make your first contribution.
+If you are unsure about anything, contact the GovTech team at [{{ site.email }}](mailto:{{ site.email }}). We are happy to help you make your first contribution.

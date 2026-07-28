@@ -13,7 +13,7 @@ If you are still on the platform, you do not need this page yet. Come back when 
 
 Most infrastructure decisions in Barbados are made by the GovTech infrastructure team, not by individual delivery teams. This is deliberate. Deviations from the standard hosting model affect cost, security, availability and interconnection with the rest of government, so they are agreed rather than chosen.
 
-Get in touch as soon as you know your service needs something the platform does not cover. Contact GovTech at [info@govtech.bb](mailto:info@govtech.bb) and ask to be connected with the infrastructure team.
+Get in touch as soon as you know your service needs something the platform does not cover. Contact GovTech at [{{ site.email }}](mailto:{{ site.email }}) and ask to be connected with the infrastructure team.
 
 Before that first conversation, be ready to describe:
 
@@ -51,5 +51,5 @@ A first meeting is more productive if you bring the right questions:
 
 ## Where to get help
 
-- Contact GovTech at [info@govtech.bb](mailto:info@govtech.bb) to be connected with the infrastructure team. Get in touch during discovery or early alpha – decisions about hosting, networking and environments are much cheaper to make early.
+- Contact GovTech at [{{ site.email }}](mailto:{{ site.email }}) to be connected with the infrastructure team. Get in touch during discovery or early alpha – decisions about hosting, networking and environments are much cheaper to make early.
 - If you can build on the [GovTech platform](/getting-started/the-govtech-platform/) without needing any of this, do that. It is faster and cheaper for both your team and GovTech.

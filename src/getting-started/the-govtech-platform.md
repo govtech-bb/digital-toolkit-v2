@@ -77,5 +77,5 @@ A complex service has substantial workflow, state, or back-office interaction. R
 
 ## Where to get help
 
-- Not sure which platform components your service needs? Contact GovTech at [info@govtech.bb](mailto:info@govtech.bb) early, before you commit to an architecture.
+- Not sure which platform components your service needs? Contact GovTech at [{{ site.email }}](mailto:{{ site.email }}) early, before you commit to an architecture.
 - [Technical infrastructure](/getting-started/technical-infrastructure/) covers what to do when your service needs something the platform does not provide.

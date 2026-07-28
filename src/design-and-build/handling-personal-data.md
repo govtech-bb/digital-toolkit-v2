@@ -9,7 +9,7 @@ This is for teams and suppliers building a government digital service. It sits a
 
 Some of the detail is deliberately not published in full. Approved templates and security controls are shared directly with engaged teams rather than on a public page. So this page tells you **what is expected** and **who to talk to**. The technical detail follows once you are engaged.
 
-**Start every one of these conversations early, and start them with GovTech.** Email [info@govtech.bb](mailto:info@govtech.bb) before you design your service around a particular approach.
+**Start every one of these conversations early, and start them with GovTech.** Email [{{ site.email }}](mailto:{{ site.email }}) before you design your service around a particular approach.
 
 ## Data-sharing agreements
 
@@ -38,7 +38,7 @@ Treat this as a description of intent, not as legal wording. The approved templa
 ### Who approves it
 
 <!-- TODO: confirm the exact approval chain and the named data protection authority/officer responsible for signing off data-sharing agreements in Barbados. Do not invent role titles or a named person. -->
-A data-sharing agreement is approved by the **owner of the data** being shared – not by the team that wants the data. There is usually also a data protection sign-off. The approval chain depends on the systems and organisations involved, so confirm it early: contact GovTech at [info@govtech.bb](mailto:info@govtech.bb) and they will point you to the right data owner and approver. Building this approval time into your plan from the start avoids a common and avoidable delay near the end of a project.
+A data-sharing agreement is approved by the **owner of the data** being shared – not by the team that wants the data. There is usually also a data protection sign-off. The approval chain depends on the systems and organisations involved, so confirm it early: contact GovTech at [{{ site.email }}](mailto:{{ site.email }}) and they will point you to the right data owner and approver. Building this approval time into your plan from the start avoids a common and avoidable delay near the end of a project.
 
 ## Security and data protection
 
@@ -62,7 +62,7 @@ If you are procuring the service, these expectations belong in your contract, so
 
 Data sharing and security are the parts of a service where early advice saves the most time and money. You do not need to have the answers before you get in touch – working them out is exactly what GovTech can help with.
 
-- Contact GovTech at [info@govtech.bb](mailto:info@govtech.bb) to discuss a data-sharing agreement or security assurance. Get in touch during discovery, before you commit your design or your procurement to a particular approach.
+- Contact GovTech at [{{ site.email }}](mailto:{{ site.email }}) to discuss a data-sharing agreement or security assurance. Get in touch during discovery, before you commit your design or your procurement to a particular approach.
 - Read [identifying and authenticating users](/design-and-build/identifying-users/) if you also need to work out how users sign in.
 - The [Barbados Digital Service Standards](/getting-started/barbados-digital-service-standards/) set out what your service must meet, including Standard 11 on trust, safety and confidentiality.
 - Read [how GovTech works with MDAs](/get-help/how-govtech-works-with-mdas/) to understand the ways GovTech can support you, including architecture and security assurance.

@@ -9,7 +9,7 @@ This page is for teams and suppliers building a government digital service. It e
 
 Some of this is deliberately not published in full. Details of identity systems and security controls are sensitive, and are shared directly with approved teams rather than on a public page. So this page tells you **who to talk to** and **what the process looks like**. The technical detail follows once you are engaged.
 
-**Start every one of these conversations early, and start them with GovTech.** Email [info@govtech.bb](mailto:info@govtech.bb) before you design your service around a particular approach. The choices below affect your architecture, your timeline and your procurement, so they belong in discovery – not after a contract is signed.
+**Start every one of these conversations early, and start them with GovTech.** Email [{{ site.email }}](mailto:{{ site.email }}) before you design your service around a particular approach. The choices below affect your architecture, your timeline and your procurement, so they belong in discovery – not after a contract is signed.
 
 Most services need to know something about the person using them. There is a difference between two things that are easy to confuse:
 
@@ -45,7 +45,7 @@ GovTech will help you choose an approach that is proportionate, meets the standa
 
 Identity decisions are hard to reverse once a service is built. You do not need to have the answers before you get in touch – working them out is exactly what GovTech can help with.
 
-- Contact GovTech at [info@govtech.bb](mailto:info@govtech.bb) to discuss identity or authentication for your service. Get in touch during discovery, before you commit your design or your procurement to a particular approach.
+- Contact GovTech at [{{ site.email }}](mailto:{{ site.email }}) to discuss identity or authentication for your service. Get in touch during discovery, before you commit your design or your procurement to a particular approach.
 - Read [handling personal data safely](/design-and-build/handling-personal-data/) for what happens after sign-in – how to share data with other government systems and how to protect it.
 - The [Barbados Digital Service Standards](/getting-started/barbados-digital-service-standards/) set out what your service must meet, including Standard 7 on shared platforms.
 - Read [how GovTech works with MDAs](/get-help/how-govtech-works-with-mdas/) to understand the ways GovTech can support you.

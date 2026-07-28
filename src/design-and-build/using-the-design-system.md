@@ -106,6 +106,6 @@ Until those patterns are published, you will need to assemble these pages yourse
 
 - Browse the [Barbados Government Design System Storybook](https://govtech-bb.github.io/design-system/) to see every component and its documentation.
 - The source code is on the [GovTech GitHub](https://github.com/govtech-bb/design-system).
-- Contact GovTech at [info@govtech.bb](mailto:info@govtech.bb) if you have questions or want to suggest a component or pattern.
+- Contact GovTech at [{{ site.email }}](mailto:{{ site.email }}) if you have questions or want to suggest a component or pattern.
 </content>
 </invoke>

@@ -123,5 +123,5 @@ Support works best as a partnership. In return for GovTech's involvement, we ask
 
 ## Contact GovTech
 
-Email [info@govtech.bb](mailto:info@govtech.bb) with a short description of your service or problem. You do not need to have all the answers before contacting us – early engagement leads to better outcomes and fewer delays.
+Email [{{ site.email }}](mailto:{{ site.email }}) with a short description of your service or problem. You do not need to have all the answers before contacting us – early engagement leads to better outcomes and fewer delays.
 

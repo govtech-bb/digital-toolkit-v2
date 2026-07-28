@@ -36,5 +36,5 @@ If you are building a new service, you build for alpha.gov.bb. If you are digiti
 
 ## Where to get help
 
-- Contact GovTech at [info@govtech.bb](mailto:info@govtech.bb) to agree a subdomain for your service.
+- Contact GovTech at [{{ site.email }}](mailto:{{ site.email }}) to agree a subdomain for your service.
 - Browse [alpha.gov.bb/services](https://alpha.gov.bb/services) to see what is already on the platform.

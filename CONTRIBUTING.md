@@ -6,8 +6,6 @@ The toolkit is only useful if it stays accurate, clear and up to date. It gets b
 
 This guide explains who can contribute, how the site is put together, the house style we write in, and how to propose a change. If you are not comfortable with Git or GitHub, there is a simple way to help too — see [If you are not comfortable with Git or GitHub](#if-you-are-not-comfortable-with-git-or-github).
 
-<!-- TODO: confirm the named GovTech owner/maintainer of this repository. Until then, contributions are reviewed by "the GovTech team" and contact is info@govtech.bb. -->
-
 ## Who can contribute
 
 Anyone can contribute. You do not need to work for GovTech.
@@ -114,15 +112,8 @@ We review every contribution. Please do not be discouraged if we suggest edits �
 
 ## If you are not comfortable with Git or GitHub
 
-You do not need to use GitHub to help.
-
-Email **[info@govtech.bb](mailto:info@govtech.bb)** and tell us:
-
-- which page you are looking at (a link or the page title)
-- what is wrong, or what you would like to change or add
-
-That is all we need. The GovTech team will make the change for you, or turn your suggestion into an issue. You will not miss out by not knowing GitHub.
+You do not need to use GitHub to help. The site's [Contribute to the toolkit](src/get-help/contribute-to-the-toolkit.md) page explains how to send us a change without a GitHub account.
 
 ## Questions
 
-If you are unsure about anything, contact the GovTech team at [info@govtech.bb](mailto:info@govtech.bb). We are happy to help.
+If you are unsure about anything, open an issue on this repository — someone from the GovTech team will pick it up. We are happy to help.
