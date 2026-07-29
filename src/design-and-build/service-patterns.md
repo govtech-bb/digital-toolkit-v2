@@ -7,7 +7,7 @@ This page defines the nine standard pages every alpha.gov.bb service follows, th
 
 The service pattern is not a rigid template — it is a shared language. Every service is different, but by mapping its questions to the same nine pages and the same set of reusable blocks, teams can design consistently, review quickly, and build forms that people can actually complete.
 
-> Live validation data from alpha.gov.bb (July 2026) found 364 errors across 17 forms in 30 days. The most common causes were missing format hints on ID and phone fields, and eligibility checks placed after rather than before personal details. Key findings are embedded throughout this page.
+> The two most common problems on today's alpha.gov.bb forms are missing format hints on ID and phone fields, and eligibility checks placed after personal details. The pages below are designed to prevent both — with guidance called out at the relevant page.
 
 The reusable field blocks referenced below (P-01, P-02, and so on) are the building blocks of a forthcoming pattern library. That library is not yet published — but the block names and codes are stable, so treat them as a shared vocabulary when talking to GovTech about a service you are designing.
 
@@ -21,9 +21,9 @@ Sets expectations before the user commits to starting. Tells them what the servi
 
 - Name and plain-English description of the service
 - Who this service is for (citizens, residents, employers, third parties)
-- What the applicant needs before starting — documents, IDs, fees
+- What the user needs before starting — documents, IDs, fees
 - A brief eligibility summary — who qualifies — but no questions yet
-- Processing time: how long before the applicant hears back
+- Processing time: how long before the user hears back
 - Cost of the service, if applicable, and how payment is made
 
 **Barbados examples**
@@ -34,7 +34,7 @@ Sets expectations before the user commits to starting. Tells them what the servi
 
 **Apply for a Conductor Licence (Transport Authority):** "You must hold a valid driving licence and have no disqualifications in the past 5 years. Fee: BBD$25. You will need your NRN and a recent police certificate of character from the Royal Barbados Police Force."
 
-> The Start Page is where the user decides whether to continue. If the eligibility summary is vague or the document list is incomplete, users start the form unprepared and abandon it partway through or submit with the wrong documents. Be specific.
+> This is where the user decides whether to continue. If the eligibility summary is vague or the document list is incomplete, users start the form unprepared and abandon it partway through or submit with the wrong documents. Be specific.
 
 ## 2. Eligibility page
 
@@ -44,14 +44,14 @@ Asks first-level filtering questions to determine whether the user can continue.
 
 **What to put on this page**
 
-- Can this applicant use this service?
+- Can the user use this service?
 - Are they applying for themselves or on behalf of someone else?
 - High-level blockers: age, citizenship, residency, employment status
 - One question per screen — do not bundle eligibility checks on a single page
 
 **Barbados examples**
 
-Programme and benefit forms — eligibility questions must come here, before Applicant Details:
+Programme and benefit forms — eligibility questions come here, before the applicant details page:
 
 *"Are you a Barbadian citizen or permanent resident?"*
 
@@ -67,7 +67,7 @@ Certificate and licence forms — simpler gatekeeping questions:
 
 *"Do you hold a valid Barbados driving licence?"*
 
-> **Critical — July 2026 validation finding:** age and eligibility failures on Jobstart Plus, Community Sports Programme, and all 10 Youth Opportunity forms were recorded *after* applicant details had been entered. Users spent time on the form then discovered they did not qualify. All programme forms must run eligibility checks on this page, before the Applicant Details page. See the Eligibility Screener Gate (P-38) in the pattern library.
+> On several current alpha.gov.bb programme forms — Jobstart Plus, Community Sports, the Youth Opportunity applications — eligibility checks were placed *after* applicant details. Users spent time filling in their name and ID before discovering they did not qualify. Run eligibility checks on this page, before the applicant details page. Use the Eligibility Screener Gate (P-38).
 
 ## 3. Applicant details page
 
@@ -81,30 +81,30 @@ Collects the personal information needed to identify the person applying. This p
 - Personal identifiers: NRN, NIS Number, Date of Birth, Gender, Marital Status (P-03 Personal Details Block)
 - Home address including parish (P-02 Barbados Address Block)
 - Contact details: phone and email (P-04 Contact Block)
-- Confirmation that the applicant is the one submitting (if required)
+- Confirmation that the user is the one submitting (if required)
 
-**Barbados field standards — mandatory on every implementation**
+**Barbados field standards**
 
 | Field | Format | Required hint text | Example to show |
 | :---- | :---- | :---- | :---- |
-| National Registration Number (NRN) | YYMMDD-XXXX | Yes — mandatory | e.g. 970315-1234 |
-| Telephone / Mobile Number | 246-XXX-XXXX | Yes — mandatory | e.g. 246-430-1234 |
-| Postal Code | BB + 5 digits | Yes — mandatory | e.g. BB11000 |
-| Date of Birth | DD/MM/YYYY | Yes — label the format | e.g. 15/03/1997 |
+| National Registration Number (NRN) | YYMMDD-XXXX | Yes, show format | e.g. 970315-1234 |
+| Telephone / Mobile Number | 246-XXX-XXXX | Yes, show format | e.g. 246-430-1234 |
+| Postal Code | BB + 5 digits | Yes, show format | e.g. BB11000 |
+| Date of Birth | DD/MM/YYYY | Yes, label the format | e.g. 15/03/1997 |
 | Parish | Dropdown — 11 options | Placeholder: "Select a parish…" | Christ Church, St. Michael, etc. |
-| NIS Number | 6-digit numeric | Yes — with source hint | "Find this on your NIS card or payslip" |
+| NIS Number | 6-digit numeric | Yes, with source hint | "Find this on your NIS card or payslip" |
 
 **Parish dropdown options (Barbados — all 11)**
 
 Christ Church · St. Andrew · St. George · St. James · St. John · St. Joseph · St. Lucy · St. Michael · St. Peter · St. Philip · St. Thomas
 
-> **Critical — July 2026 validation finding:** The NRN field (`applicant.idNumber`) is the single most-failed field across the entire platform — 76 errors across 5 forms. The format hint is not optional. Every form that collects the NRN must show "e.g. 970315-1234" beneath the field. Telephone generated 45 errors; postcode generated 42. The same rule applies to both.
+> The NRN, telephone, and postcode fields are the most-failed fields on alpha.gov.bb: users guess the format and are rejected. Show the example hint beneath every field — "e.g. 970315-1234", "e.g. 246-430-1234", "e.g. BB11000".
 
 ## 4. Criteria and entitlement page
 
 **What this page does**
 
-Goes deeper than the Eligibility Page. Asks behaviour- or status-based questions that determine whether the applicant is entitled to the specific service they are requesting. These questions may reveal disqualifications, conditions, or legal requirements that affect what happens next.
+Goes deeper than the eligibility page. Asks behaviour- or status-based questions that determine whether the applicant is entitled to the specific service they are requesting. These questions may reveal disqualifications, conditions, or legal requirements that affect what happens next.
 
 **What to put on this page**
 
@@ -125,17 +125,17 @@ Goes deeper than the Eligibility Page. Asks behaviour- or status-based questions
 
 *"Has your NIS benefit claim been previously rejected?"*
 
-> This page always precedes Evidence-Based Questions. A "Yes" here is what triggers a follow-up evidence page. A "No" may mean the evidence page is skipped entirely. Design the flow so that only relevant follow-up questions are shown.
+> This page always precedes the evidence-based questions page. A "Yes" here is what triggers a follow-up evidence page. A "No" may mean the evidence page is skipped entirely. Design the flow so that only relevant follow-up questions are shown.
 
 ## 5. Evidence-based questions page
 
 **What this page does**
 
-Collects the detailed information needed to verify a claim, rule, or condition flagged on the Criteria and Entitlement page. This page only appears when there is something to follow up on from the previous page.
+Collects the detailed information needed to verify a claim, rule, or condition flagged on the criteria and entitlement page. This page only appears when there is something to follow up on from the previous page.
 
 **What to put on this page**
 
-- Structured details triggered by a "Yes" answer in Criteria and Entitlement
+- Structured details triggered by a "Yes" answer on the criteria and entitlement page
 - Court name, date, period (if they declared a disqualification)
 - Description of the relationship to the deceased (death certificate)
 - Employer and employment period details (Jobstart, NIS forms)
@@ -151,7 +151,7 @@ Collects the detailed information needed to verify a claim, rule, or condition f
 
 *"Which educational institution are you currently attending, and what programme are you enrolled in?"* [Youth Opportunity BTU]
 
-> This page always follows from something asked in Criteria and Entitlement. If nothing was flagged there, this page does not appear. Never use this page to ask general background questions — it is specifically for follow-up evidence.
+> This page always follows from something asked on the criteria and entitlement page. If nothing was flagged there, this page does not appear. Never use this page to ask general background questions — it is specifically for follow-up evidence.
 
 ## 6. External evidence upload page
 
@@ -181,7 +181,7 @@ PDF, JPG, PNG · Maximum file size: 5MB per document · Scanned documents must b
 
 **What this page does**
 
-Shows the applicant a complete, readable summary of everything they have entered. Gives them the opportunity to review and correct before submitting. No new questions are asked here.
+Shows the user a complete, readable summary of everything they have entered. Gives them the opportunity to review and correct before submitting. No new questions are asked here.
 
 **What to put on this page**
 
@@ -197,7 +197,7 @@ The standard declaration reads: *"I declare that the information I have provided
 
 For NIS forms carrying a penalty, add: *"WARNING: Any person who makes a false statement is liable to a fine or term of imprisonment or both."* Display this above the submit button.
 
-> **Critical — July 2026 validation finding:** The declaration checkbox (`declaration.confirmed`) failed 7 times across 4 forms. The checkbox is being missed. Requirements: minimum 44×44px tap target on mobile; visually separate from the declaration text body; do not place it at the bottom of a long paragraph — use a summary + expandable detail approach for long declarations.
+> On several live forms the declaration checkbox is being missed at submission time. Make it easy to see and easy to tap: at least 44×44px on mobile, visually separated from the declaration text, and never buried at the bottom of a long paragraph. For long declarations, show a short summary and let the user expand for detail.
 
 ## 8. Payment and submit page
 
@@ -210,12 +210,12 @@ Allows the user to pay for the service (when applicable) and make their final su
 - Fee amount, clearly stated in BBD$ before the user enters payment details
 - Accepted payment methods — currently EZ Pay for government services
 - Payment confirmation before submission is triggered
-- Final declaration (if not already on the Check Your Answers page)
+- Final declaration (if not already on the check your answers page)
 - Submit button — labelled specifically, e.g. "Submit Application", "Pay and Submit", "Submit Certificate Request"
 
 **Barbados payment notes**
 
-Government services on alpha.gov.bb currently accept payment via EZ Pay. Do not show a payment page for services that are free of charge — go directly to submission. Where a service has tiered fees (e.g. different certificate types), state the correct fee on the Check Your Answers page before the user reaches this step.
+Government services on alpha.gov.bb currently accept payment via EZ Pay. Do not show a payment page for services that are free of charge — go directly to submission. Where a service has tiered fees (e.g. different certificate types), state the correct fee on the check your answers page before the user reaches this step.
 
 > Not every service requires payment, but every service has a submit step. The submit button label should reflect what the action does — "Submit Application" for a programme form, "Pay and Submit" for a fee-bearing service, "Submit Certificate Request" for a records request.
 
@@ -249,21 +249,21 @@ Each block maps to a pattern in the forthcoming pattern library, which will hold
 
 | Block | Pattern | Optimal page | Notes |
 | :---- | :---- | :---- | :---- |
-| Name Block | P-01 | Applicant Details | Title, first name, middle name(s), last name. Pre-fill after login where possible. |
-| Barbados Address Block | P-02 | Applicant Details | Street address, district (village/area), parish (dropdown — 11 options), postal code (BB + 5 digits). Hint text mandatory on postcode. |
-| Personal Details Block | P-03 | Applicant Details | NRN (YYMMDD-XXXX — example hint mandatory), NIS Number, Date of Birth, Gender, Marital Status. High candidate for pre-fill. |
-| Contact Block | P-04 | Applicant Details | Telephone (246-XXX-XXXX — example hint mandatory), mobile, email. At least one of telephone/mobile required. |
-| Eligibility Screener Gate | P-38 | Eligibility Page | Age range, citizenship, residency, programme-specific questions. Must come BEFORE Applicant Details on all programme forms. Added July 2026. |
-| Eligibility Block | P-12, P-16 | Eligibility Page | ID type gate, termination type gate. Simple yes/no. Stop ineligible users immediately with a clear explanation and alternatives. |
+| Name Block | P-01 | Applicant details | Title, first name, middle name(s), last name. Pre-fill after login where possible. |
+| Barbados Address Block | P-02 | Applicant details | Street address, district (village/area), parish (dropdown — 11 options), postal code (BB + 5 digits). Show hint text on postcode. |
+| Personal Details Block | P-03 | Applicant details | NRN (YYMMDD-XXXX — show format example), NIS Number, Date of Birth, Gender, Marital Status. High candidate for pre-fill. |
+| Contact Block | P-04 | Applicant details | Telephone (246-XXX-XXXX — show format example), mobile, email. At least one of telephone/mobile required. |
+| Eligibility Screener Gate | P-38 | Eligibility | Age range, citizenship, residency, programme-specific questions. Comes before applicant details on programme forms. Added July 2026. |
+| Eligibility Block | P-12, P-16 | Eligibility | ID type gate, termination type gate. Simple yes/no. Stop ineligible users immediately with a clear explanation and alternatives. |
 | Employer Identity Block | P-06 | Applicant / Criteria | Employer name and NIS registration number. Can pre-populate from employer login. Format TBC with NIS (Q-01). |
-| Employment History Block | P-07 | Evidence-Based | Occupation, employment dates, termination and last paid dates. Sequential date validation mandatory. |
+| Employment History Block | P-07 | Evidence-based | Occupation, employment dates, termination and last paid dates. Validate the dates in sequence. |
 | Business Details Block | P-11 | Applicant / Criteria | Business name, CAIPO (Corporate Affairs and Intellectual Property Office) registration number, nature of business, estimated monthly income. |
-| Evidence Upload Block | P-09, P-12 | External Evidence Upload | NRN card, passport, police certificate (RBPF), NIS statement, bank passbook, educational certificates. PDF/JPG/PNG, max 5MB. |
-| Declaration Block | P-05 | Check Your Answers | Legal statement + consent checkbox + date. Penalty-carrying forms: add legal warning above checkbox. 44px minimum tap target. |
-| Payment Block | — | Payment and Submit | EZ Pay integration. Display fee clearly before user enters payment. State the exact BBD$ amount. |
+| Evidence Upload Block | P-09, P-12 | External evidence upload | NRN card, passport, police certificate (RBPF), NIS statement, bank passbook, educational certificates. PDF/JPG/PNG, max 5MB. |
+| Declaration Block | P-05 | Check your answers | Legal statement + consent checkbox + date. Penalty-carrying forms: add legal warning above checkbox. 44px minimum tap target. |
+| Payment Block | — | Payment and submit | EZ Pay integration. Display fee clearly before the user enters payment. State the exact BBD$ amount. |
 | Official Use Block | P-14 | Admin view only | Internal officer fields. Never visible to citizens. Requires separate MDA officer UI spec. |
-| Banking Details Block | P-08 | Applicant Details | Bank, branch, account type, account number. Required when claimant elects direct deposit. Upload bank statement as proof. |
-| Alternate Payee / Nominee Block | P-09 | Applicant Details | Mirrors full applicant details for a nominated third party. Requires empowerment instrument upload. |
+| Banking Details Block | P-08 | Applicant details | Bank, branch, account type, account number. Required when claimant elects direct deposit. Upload bank statement as proof. |
+| Alternate Payee / Nominee Block | P-09 | Applicant details | Mirrors full applicant details for a nominated third party. Requires empowerment instrument upload. |
 
 ## AI prompt — form analysis
 
@@ -271,7 +271,7 @@ Use this prompt when analysing a paper form or an existing digital form to categ
 
 > Using the attached alpha.gov.bb Service Patterns document, analyse the attached form and do the following:
 >
-> 1. Categorise each question or field into the correct service pattern page (Start Page, Eligibility Page, Applicant Details, Criteria and Entitlement, Evidence-Based Questions, External Evidence Upload, Check Your Answers, Payment and Submit, Confirmation).
+> 1. Categorise each question or field into the correct service pattern page (start page, eligibility page, applicant details, criteria and entitlement, evidence-based questions, external evidence upload, check your answers, payment and submit, confirmation).
 > 2. Flag any questions that are in the wrong position — for example, eligibility checks that appear after personal details, or evidence questions that appear before criteria questions.
 > 3. Note any fields that are missing Barbados-specific format guidance: NRN (YYMMDD-XXXX), telephone (246-XXX-XXXX), postcode (BB + 5 digits), date of birth (DD/MM/YYYY).
 > 4. Identify which standardised blocks (P-01 through P-38) apply, and note any fields that deviate from the block specification.
@@ -281,15 +281,15 @@ Use this prompt when analysing a paper form or an existing digital form to categ
 
 ## Common design errors to avoid
 
-Based on live validation data from alpha.gov.bb forms (July 2026, 364 errors across 17 forms).
+These are the design errors most likely to break a form on alpha.gov.bb. Each is common, avoidable, and worth checking for before you ship.
 
 ### 1. Eligibility checks placed after personal details
 
-The most disruptive error. Users fill in their name, address, and ID, then discover they don't qualify. Move all age, citizenship, and programme eligibility checks to the Eligibility Page (page 2), before the Applicant Details page (page 3). Use the Eligibility Screener Gate (P-38).
+The most disruptive error. Users fill in their name, address, and ID, then discover they don't qualify. Move all age, citizenship, and programme eligibility checks to the eligibility page (page 2), before the applicant details page (page 3). Use the Eligibility Screener Gate (P-38).
 
 ### 2. Missing format hints on ID, phone, and postcode fields
 
-The NRN, telephone, and postcode fields all have specific Barbadian formats. Without an example, users guess and get rejected. "e.g. 970315-1234", "e.g. 246-430-1234", and "e.g. BB11000" are not optional — they are required on every implementation of these fields.
+The NRN, telephone, and postcode fields all have specific Barbadian formats. Without an example, users guess and get rejected. "e.g. 970315-1234", "e.g. 246-430-1234", and "e.g. BB11000" belong on every implementation of these fields.
 
 ### 3. Shared templates deployed without field-level testing
 
@@ -301,7 +301,7 @@ The declaration checkbox fails when it is too small to tap on mobile, or sits at
 
 ### 5. Launching without user testing
 
-Five people attempting a form out loud before it goes live would catch format hint problems and eligibility placement errors in a single afternoon. Informal testing is not optional for government services — it is the cheapest quality check available.
+Five people attempting a form out loud before it goes live would catch format hint problems and eligibility placement errors in a single afternoon. Informal testing is the cheapest quality check available for a government service — and it will catch problems that would otherwise ship.
 
 ## Where to get help
 
