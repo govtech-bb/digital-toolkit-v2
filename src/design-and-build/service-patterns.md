@@ -9,6 +9,8 @@ The service pattern is not a rigid template — it is a shared language. Every s
 
 > Live validation data from alpha.gov.bb (July 2026) found 364 errors across 17 forms in 30 days. The most common causes were missing format hints on ID and phone fields, and eligibility checks placed after rather than before personal details. Key findings are embedded throughout this page.
 
+The reusable field blocks referenced below (P-01, P-02, and so on) are the building blocks of a forthcoming pattern library. That library is not yet published — but the block names and codes are stable, so treat them as a shared vocabulary when talking to GovTech about a service you are designing.
+
 ## 1. Start page
 
 **What this page does**
@@ -28,7 +30,7 @@ Sets expectations before the user commits to starting. Tells them what the servi
 
 **Get a Birth Certificate (Barbados Registration Department):** "You will need your National Registration Number (NRN), the full name and date of birth of the person named on the certificate, and your reason for ordering. Fee: BBD$10. Processing: 3–5 working days."
 
-**Jobstart Plus Programme (MoE&T):** "This programme is open to Barbadian citizens and permanent residents aged 18–35 who are currently unemployed. You will need your NRN, NIS number, and bank account details for payment. Applications are reviewed within 10 working days."
+**Jobstart Plus Programme (Ministry of Education and Technological and Vocational Training):** "This programme is open to Barbadian citizens and permanent residents aged 18–35 who are currently unemployed. You will need your NRN, NIS number, and bank account details for payment. Applications are reviewed within 10 working days."
 
 **Apply for a Conductor Licence (Transport Authority):** "You must hold a valid driving licence and have no disqualifications in the past 5 years. Fee: BBD$25. You will need your NRN and a recent police certificate of character from the Royal Barbados Police Force."
 
@@ -65,13 +67,13 @@ Certificate and licence forms — simpler gatekeeping questions:
 
 *"Do you hold a valid Barbados driving licence?"*
 
-> **Critical — July 2026 validation finding:** age and eligibility failures on Jobstart Plus, Community Sports Programme, and all 10 Youth Opportunity forms were recorded *after* applicant details had been entered. Users spent time on the form then discovered they did not qualify. All programme forms must run eligibility checks on this page, before the Applicant Details page. See the Eligibility Screener Gate (P-38) in the Pattern Library.
+> **Critical — July 2026 validation finding:** age and eligibility failures on Jobstart Plus, Community Sports Programme, and all 10 Youth Opportunity forms were recorded *after* applicant details had been entered. Users spent time on the form then discovered they did not qualify. All programme forms must run eligibility checks on this page, before the Applicant Details page. See the Eligibility Screener Gate (P-38) in the pattern library.
 
 ## 3. Applicant details page
 
 **What this page does**
 
-Collects the personal information needed to identify the person applying. This page is about who they are, not about the service yet. It draws entirely from the standardised field blocks (P-01 through P-04) defined in the Pattern Library.
+Collects the personal information needed to identify the person applying. This page is about who they are, not about the service yet. It draws entirely from the standardised field blocks (P-01 through P-04) defined in the pattern library.
 
 **What to put on this page**
 
@@ -88,7 +90,7 @@ Collects the personal information needed to identify the person applying. This p
 | National Registration Number (NRN) | YYMMDD-XXXX | Yes — mandatory | e.g. 970315-1234 |
 | Telephone / Mobile Number | 246-XXX-XXXX | Yes — mandatory | e.g. 246-430-1234 |
 | Postal Code | BB + 5 digits | Yes — mandatory | e.g. BB11000 |
-| Date of Birth | DD/MM/YYYY | Yes — label the format | e.g. 15 03 1997 |
+| Date of Birth | DD/MM/YYYY | Yes — label the format | e.g. 15/03/1997 |
 | Parish | Dropdown — 11 options | Placeholder: "Select a parish…" | Christ Church, St. Michael, etc. |
 | NIS Number | 6-digit numeric | Yes — with source hint | "Find this on your NIS card or payslip" |
 
@@ -191,9 +193,9 @@ Shows the applicant a complete, readable summary of everything they have entered
 
 **Declaration text — standard for Barbados government services**
 
-> Standard declaration: "I declare that the information I have provided on this form is true and correct to the best of my knowledge and belief. I understand that providing false information may result in prosecution under the laws of Barbados."
->
-> For NIS forms carrying a penalty: add "WARNING: Any person who makes a false statement is liable to a fine or term of imprisonment or both." Display this above the submit button.
+The standard declaration reads: *"I declare that the information I have provided on this form is true and correct to the best of my knowledge and belief. I understand that providing false information may result in prosecution under the laws of Barbados."*
+
+For NIS forms carrying a penalty, add: *"WARNING: Any person who makes a false statement is liable to a fine or term of imprisonment or both."* Display this above the submit button.
 
 > **Critical — July 2026 validation finding:** The declaration checkbox (`declaration.confirmed`) failed 7 times across 4 forms. The checkbox is being missed. Requirements: minimum 44×44px tap target on mobile; visually separate from the declaration text body; do not place it at the bottom of a long paragraph — use a summary + expandable detail approach for long declarations.
 
@@ -243,11 +245,11 @@ Confirms the submission and tells the user clearly what will happen next, in wha
 
 ## Standardised field blocks
 
-Every block maps to a pattern in the Pattern Library (pattern-library.html). Reference the pattern for field-level specifications, validation rules, and design notes.
+Each block maps to a pattern in the forthcoming pattern library, which will hold field-level specifications, validation rules, and design notes. The library is not yet published; the codes below are stable references you can use in the meantime.
 
 | Block | Pattern | Optimal page | Notes |
 | :---- | :---- | :---- | :---- |
-| Name Block | P-01 | Applicant Details | Title, first name, middle name(s), last name. Use DD/MM/YYYY field ordering. Pre-fill after login where possible. |
+| Name Block | P-01 | Applicant Details | Title, first name, middle name(s), last name. Pre-fill after login where possible. |
 | Barbados Address Block | P-02 | Applicant Details | Street address, district (village/area), parish (dropdown — 11 options), postal code (BB + 5 digits). Hint text mandatory on postcode. |
 | Personal Details Block | P-03 | Applicant Details | NRN (YYMMDD-XXXX — example hint mandatory), NIS Number, Date of Birth, Gender, Marital Status. High candidate for pre-fill. |
 | Contact Block | P-04 | Applicant Details | Telephone (246-XXX-XXXX — example hint mandatory), mobile, email. At least one of telephone/mobile required. |
@@ -255,7 +257,7 @@ Every block maps to a pattern in the Pattern Library (pattern-library.html). Ref
 | Eligibility Block | P-12, P-16 | Eligibility Page | ID type gate, termination type gate. Simple yes/no. Stop ineligible users immediately with a clear explanation and alternatives. |
 | Employer Identity Block | P-06 | Applicant / Criteria | Employer name and NIS registration number. Can pre-populate from employer login. Format TBC with NIS (Q-01). |
 | Employment History Block | P-07 | Evidence-Based | Occupation, employment dates, termination and last paid dates. Sequential date validation mandatory. |
-| Business Details Block | P-11 | Applicant / Criteria | Business name, CAIPO registration number, nature of business, estimated monthly income. |
+| Business Details Block | P-11 | Applicant / Criteria | Business name, CAIPO (Corporate Affairs and Intellectual Property Office) registration number, nature of business, estimated monthly income. |
 | Evidence Upload Block | P-09, P-12 | External Evidence Upload | NRN card, passport, police certificate (RBPF), NIS statement, bank passbook, educational certificates. PDF/JPG/PNG, max 5MB. |
 | Declaration Block | P-05 | Check Your Answers | Legal statement + consent checkbox + date. Penalty-carrying forms: add legal warning above checkbox. 44px minimum tap target. |
 | Payment Block | — | Payment and Submit | EZ Pay integration. Display fee clearly before user enters payment. State the exact BBD$ amount. |
