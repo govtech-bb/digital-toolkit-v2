@@ -9,8 +9,6 @@ The service pattern is not a rigid template — it is a shared language. Every s
 
 > The two most common problems on today's alpha.gov.bb forms are missing format hints on ID and phone fields, and eligibility checks placed after personal details. The pages below are designed to prevent both — with guidance called out at the relevant page.
 
-The reusable field blocks referenced below (P-01, P-02, and so on) are the building blocks of a forthcoming pattern library. That library is not yet published — but the block names and codes are stable, so treat them as a shared vocabulary when talking to GovTech about a service you are designing.
-
 ## 1. Start page
 
 **What this page does**
@@ -67,20 +65,20 @@ Certificate and licence forms — simpler gatekeeping questions:
 
 *"Do you hold a valid Barbados driving licence?"*
 
-> On several current alpha.gov.bb programme forms — Jobstart Plus, Community Sports, the Youth Opportunity applications — eligibility checks were placed *after* applicant details. Users spent time filling in their name and ID before discovering they did not qualify. Run eligibility checks on this page, before the applicant details page. Use the Eligibility Screener Gate (P-38).
+> On several current alpha.gov.bb programme forms — Jobstart Plus, Community Sports, the Youth Opportunity applications — eligibility checks were placed *after* applicant details. Users spent time filling in their name and ID before discovering they did not qualify. Run eligibility checks on this page, before the applicant details page.
 
 ## 3. Applicant details page
 
 **What this page does**
 
-Collects the personal information needed to identify the person applying. This page is about who they are, not about the service yet. It draws entirely from the standardised field blocks (P-01 through P-04) defined in the pattern library.
+Collects the personal information needed to identify the person applying. This page is about who they are, not about the service yet.
 
 **What to put on this page**
 
-- Full name (P-01 Name Block)
-- Personal identifiers: NRN, NIS Number, Date of Birth, Gender, Marital Status (P-03 Personal Details Block)
-- Home address including parish (P-02 Barbados Address Block)
-- Contact details: phone and email (P-04 Contact Block)
+- Full name
+- Personal identifiers: NRN, NIS Number, Date of Birth, Gender, Marital Status
+- Home address including parish
+- Contact details: phone and email
 - Confirmation that the user is the one submitting (if required)
 
 **Barbados field standards**
@@ -245,25 +243,25 @@ Confirms the submission and tells the user clearly what will happen next, in wha
 
 ## Standardised field blocks
 
-Each block maps to a pattern in the forthcoming pattern library, which will hold field-level specifications, validation rules, and design notes. The library is not yet published; the codes below are stable references you can use in the meantime.
+Many services share the same groups of fields — name, address, contact details, evidence uploads. Treat these as reusable blocks: design them once and lift them into every service that needs them.
 
-| Block | Pattern | Optimal page | Notes |
-| :---- | :---- | :---- | :---- |
-| Name Block | P-01 | Applicant details | Title, first name, middle name(s), last name. Pre-fill after login where possible. |
-| Barbados Address Block | P-02 | Applicant details | Street address, district (village/area), parish (dropdown — 11 options), postal code (BB + 5 digits). Show hint text on postcode. |
-| Personal Details Block | P-03 | Applicant details | NRN (YYMMDD-XXXX — show format example), NIS Number, Date of Birth, Gender, Marital Status. High candidate for pre-fill. |
-| Contact Block | P-04 | Applicant details | Telephone (246-XXX-XXXX — show format example), mobile, email. At least one of telephone/mobile required. |
-| Eligibility Screener Gate | P-38 | Eligibility | Age range, citizenship, residency, programme-specific questions. Comes before applicant details on programme forms. Added July 2026. |
-| Eligibility Block | P-12, P-16 | Eligibility | ID type gate, termination type gate. Simple yes/no. Stop ineligible users immediately with a clear explanation and alternatives. |
-| Employer Identity Block | P-06 | Applicant / Criteria | Employer name and NIS registration number. Can pre-populate from employer login. Format TBC with NIS (Q-01). |
-| Employment History Block | P-07 | Evidence-based | Occupation, employment dates, termination and last paid dates. Validate the dates in sequence. |
-| Business Details Block | P-11 | Applicant / Criteria | Business name, CAIPO (Corporate Affairs and Intellectual Property Office) registration number, nature of business, estimated monthly income. |
-| Evidence Upload Block | P-09, P-12 | External evidence upload | NRN card, passport, police certificate (RBPF), NIS statement, bank passbook, educational certificates. PDF/JPG/PNG, max 5MB. |
-| Declaration Block | P-05 | Check your answers | Legal statement + consent checkbox + date. Penalty-carrying forms: add legal warning above checkbox. 44px minimum tap target. |
-| Payment Block | — | Payment and submit | EZ Pay integration. Display fee clearly before the user enters payment. State the exact BBD$ amount. |
-| Official Use Block | P-14 | Admin view only | Internal officer fields. Never visible to citizens. Requires separate MDA officer UI spec. |
-| Banking Details Block | P-08 | Applicant details | Bank, branch, account type, account number. Required when claimant elects direct deposit. Upload bank statement as proof. |
-| Alternate Payee / Nominee Block | P-09 | Applicant details | Mirrors full applicant details for a nominated third party. Requires empowerment instrument upload. |
+| Block | Optimal page | Notes |
+| :---- | :---- | :---- |
+| Name Block | Applicant details | Title, first name, middle name(s), last name. Pre-fill after login where possible. |
+| Barbados Address Block | Applicant details | Street address, district (village/area), parish (dropdown — 11 options), postal code (BB + 5 digits). Show hint text on postcode. |
+| Personal Details Block | Applicant details | NRN (YYMMDD-XXXX — show format example), NIS Number, Date of Birth, Gender, Marital Status. High candidate for pre-fill. |
+| Contact Block | Applicant details | Telephone (246-XXX-XXXX — show format example), mobile, email. At least one of telephone/mobile required. |
+| Eligibility Screener Gate | Eligibility | Age range, citizenship, residency, programme-specific questions. Comes before applicant details on programme forms. |
+| Eligibility Block | Eligibility | ID type gate, termination type gate. Simple yes/no. Stop ineligible users immediately with a clear explanation and alternatives. |
+| Employer Identity Block | Applicant / Criteria | Employer name and NIS registration number. Can pre-populate from employer login. Format TBC with NIS. |
+| Employment History Block | Evidence-based | Occupation, employment dates, termination and last paid dates. Validate the dates in sequence. |
+| Business Details Block | Applicant / Criteria | Business name, CAIPO (Corporate Affairs and Intellectual Property Office) registration number, nature of business, estimated monthly income. |
+| Evidence Upload Block | External evidence upload | NRN card, passport, police certificate (RBPF), NIS statement, bank passbook, educational certificates. PDF/JPG/PNG, max 5MB. |
+| Declaration Block | Check your answers | Legal statement + consent checkbox + date. Penalty-carrying forms: add legal warning above checkbox. 44px minimum tap target. |
+| Payment Block | Payment and submit | EZ Pay integration. Display fee clearly before the user enters payment. State the exact BBD$ amount. |
+| Official Use Block | Admin view only | Internal officer fields. Never visible to citizens. Requires separate MDA officer UI spec. |
+| Banking Details Block | Applicant details | Bank, branch, account type, account number. Required when claimant elects direct deposit. Upload bank statement as proof. |
+| Alternate Payee / Nominee Block | Applicant details | Mirrors full applicant details for a nominated third party. Requires empowerment instrument upload. |
 
 ## AI prompt — form analysis
 
@@ -274,7 +272,7 @@ Use this prompt when analysing a paper form or an existing digital form to categ
 > 1. Categorise each question or field into the correct service pattern page (start page, eligibility page, applicant details, criteria and entitlement, evidence-based questions, external evidence upload, check your answers, payment and submit, confirmation).
 > 2. Flag any questions that are in the wrong position — for example, eligibility checks that appear after personal details, or evidence questions that appear before criteria questions.
 > 3. Note any fields that are missing Barbados-specific format guidance: NRN (YYMMDD-XXXX), telephone (246-XXX-XXXX), postcode (BB + 5 digits), date of birth (DD/MM/YYYY).
-> 4. Identify which standardised blocks (P-01 through P-38) apply, and note any fields that deviate from the block specification.
+> 4. Identify which standardised field blocks apply, and note any fields that deviate from the block description.
 > 5. Produce a summary table showing: Field / Current Page / Correct Page / Issue (if any).
 >
 > [Attach this document and the form to analyse]
@@ -285,7 +283,7 @@ These are the design errors most likely to break a form on alpha.gov.bb. Each is
 
 ### 1. Eligibility checks placed after personal details
 
-The most disruptive error. Users fill in their name, address, and ID, then discover they don't qualify. Move all age, citizenship, and programme eligibility checks to the eligibility page (page 2), before the applicant details page (page 3). Use the Eligibility Screener Gate (P-38).
+The most disruptive error. Users fill in their name, address, and ID, then discover they don't qualify. Move all age, citizenship, and programme eligibility checks to the eligibility page (page 2), before the applicant details page (page 3).
 
 ### 2. Missing format hints on ID, phone, and postcode fields
 
