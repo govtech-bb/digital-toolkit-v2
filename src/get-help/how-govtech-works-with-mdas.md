@@ -1,9 +1,8 @@
-# How GovTech works with MDAs
-
-Last updated July 2026
-
 ---
-
+layout: layouts/article.njk
+title: How GovTech works with MDAs
+lede: An overview of the different ways GovTech can engage – from light-touch advice and standards assurance, through to hands-on delivery support and co-design.
+---
 GovTech Barbados supports ministries, departments and agencies (MDAs) at every stage of digital service delivery. This page explains the different ways we can work together – from light-touch advice through to hands-on delivery – and how to choose the right one for your project.
 
 This page is for anyone in an MDA who is planning a digital initiative, working with a supplier, or wondering whether GovTech can help.
@@ -12,7 +11,7 @@ This page is for anyone in an MDA who is planning a digital initiative, working 
 
 GovTech's role is to make it easier for every MDA to deliver good digital services. We do this by:
 
-- setting the standards all government digital services should meet – the [Barbados Digital Service Standards](https://github.com/govtech-bb/Barbados-Digital-Service-Standards)
+- setting the standards all government digital services should meet – the [Barbados Digital Service Standards](/getting-started/barbados-digital-service-standards/)
 - providing shared tools, including the [Barbados Government Design System](https://govtech-bb.github.io/design-system/) and open-source code on [GitHub](https://github.com/govtech-bb)
 - advising MDAs on technology decisions, procurement and service design
 - building some services directly, where that is the fastest route to value
@@ -119,11 +118,10 @@ Support works best as a partnership. In return for GovTech's involvement, we ask
 
 - name a senior owner for the service who can make decisions
 - give the work real time from your own staff – transformation cannot be entirely delegated to suppliers or to GovTech
-- commit to meeting the [Digital Service Standards](https://github.com/govtech-bb/Barbados-Digital-Service-Standards) and using the [Design System](https://govtech-bb.github.io/design-system/)
+- commit to meeting the [Digital Service Standards](/getting-started/barbados-digital-service-standards/) and using the [Design System](https://govtech-bb.github.io/design-system/)
 - share what you learn, so other MDAs can benefit from it
 
 ## Contact GovTech
 
-Email [info@govtech.bb](mailto:info@govtech.bb) with a short description of your service or problem. You do not need to have all the answers before contacting us – early engagement leads to better outcomes and fewer delays.
+Email [{{ site.email }}](mailto:{{ site.email }}) with a short description of your service or problem. You do not need to have all the answers before contacting us – early engagement leads to better outcomes and fewer delays.
 
----

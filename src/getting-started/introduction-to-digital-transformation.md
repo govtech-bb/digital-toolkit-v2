@@ -1,9 +1,8 @@
-# Introduction to digital transformation in Barbados
-
-Last updated July 2026
-
 ---
-
+layout: layouts/article.njk
+title: Introduction to digital transformation in Barbados
+lede: A plain-language guide for senior leaders and project managers on what digital transformation means, how government services get built, and what your role is.
+---
 Digital transformation is the work of redesigning government services around the people who use them – and using technology to make those services simpler, faster and more reliable.
 
 This page is for senior leaders and project managers in ministries, departments and agencies (MDAs). It explains what digital transformation means in practice, how government digital services get built, and what your role is as a leader.
@@ -50,7 +49,7 @@ If you remember nothing else from this page, remember three things:
 
 ## How government digital services get built
 
-Good digital services are not specified once and built in one go. They are developed in phases, with each phase designed to reduce risk before more money is committed. This is the approach used by digital government teams worldwide, and it is the approach the [Barbados Digital Service Standards](https://github.com/govtech-bb/Barbados-Digital-Service-Standards) expect.
+Good digital services are not specified once and built in one go. They are developed in phases, with each phase designed to reduce risk before more money is committed. This is the approach used by digital government teams worldwide, and it is the approach the [Barbados Digital Service Standards](/getting-started/barbados-digital-service-standards/) expect.
 
 ### Discovery
 
@@ -78,16 +77,16 @@ Be wary of any plan – internal or from a supplier – that skips discovery and
 
 ## What good looks like
 
-All digital services developed for the Government of Barbados should meet the [Barbados Digital Service Standards](https://github.com/govtech-bb/Barbados-Digital-Service-Standards). Services should:
+All digital services developed for the Government of Barbados should meet the [Barbados Digital Service Standards](/getting-started/barbados-digital-service-standards/). Services should:
 
-1. Be designed around user needs
-2. Be accessible and inclusive
-3. Be simple and clear
-4. Protect personal data and privacy
-5. Be secure and resilient
-6. Use common platforms and components where possible
-7. Be built in small, testable iterations
-8. Be measurable and continuously improved
+- be designed around user needs
+- be accessible and inclusive
+- be simple and clear
+- protect personal data and privacy
+- be secure and resilient
+- use common platforms and components where possible
+- be built in small, testable iterations
+- be measurable and continuously improved
 
 These standards apply whether the service is built by GovTech, your MDA, or an external supplier. If you procure a service, the standards belong in your contract.
 
@@ -126,12 +125,10 @@ If your MDA is at the beginning of this journey, here is a practical sequence:
 5. **Define success.** Set clear, measurable outcomes – reduced processing time, fewer office visits, higher satisfaction.
 6. **Plan your team and budget.** Decide who will lead the work, whether you need a supplier, and secure an appropriate budget.
 
-If your service is a straightforward form, you may not need a project at all – the GovTech Forms team may be able to help you put it online quickly. See [put simple forms online](../index.html) in this toolkit.
+If your service is a straightforward form, you may not need a project at all – the GovTech Forms team may be able to help you put it online quickly. See [the GovTech platform's guidance for simple services](/getting-started/the-govtech-platform/#for-a-simple-service).
 
 ## Where to get help
 
-- Read [how GovTech works with MDAs](../get-help/how-govtech-works-with-mdas.html) to understand the ways GovTech can support you.
-- The [Barbados Digital Service Standards](https://github.com/govtech-bb/Barbados-Digital-Service-Standards) set out what your service must meet.
-- Contact GovTech at [info@govtech.bb](mailto:info@govtech.bb) if you are thinking about digitising a service, planning a procurement, or unsure where to start. You do not need to have all the answers before contacting us – early conversations lead to better outcomes.
-
----
+- Read [how GovTech works with MDAs](/get-help/how-govtech-works-with-mdas/) to understand the ways GovTech can support you.
+- The [Barbados Digital Service Standards](/getting-started/barbados-digital-service-standards/) set out what your service must meet.
+- Contact GovTech at [{{ site.email }}](mailto:{{ site.email }}) if you are thinking about digitising a service, planning a procurement, or unsure where to start. You do not need to have all the answers before contacting us – early conversations lead to better outcomes.
