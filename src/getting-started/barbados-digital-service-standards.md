@@ -368,7 +368,7 @@ This will help facilitate knowledge exchange and capability building within the 
 ### How to do it
 
 - Have a regular cadence of show and tell sessions with MDAs when building services
-- After building the service publish the service’s source code in open code repositories such as GitHub
+- Continuously publish code updates to open code repositories e.g. GitHub across the entire build lifecycle, ensuring transparency from day one.
 
 ### Resources
 
